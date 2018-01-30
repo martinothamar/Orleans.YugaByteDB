@@ -1,0 +1,1220 @@
+// ***** BenchmarkRunner: Start   *****
+// Found benchmarks:
+//   ProtoVsJson.YugaByte_JsonWrite: DefaultJob
+//   ProtoVsJson.YugaByte_ProtobufWrite: DefaultJob
+//   ProtoVsJson.YugaByte_JsonRead: DefaultJob
+//   ProtoVsJson.YugaByte_ProtobufRead: DefaultJob
+//   ProtoVsJson.Redis_JsonWrite: DefaultJob
+//   ProtoVsJson.Redis_ProtobufWrite: DefaultJob
+//   ProtoVsJson.Redis_JsonRead: DefaultJob
+//   ProtoVsJson.Redis_ProtobufRead: DefaultJob
+
+// Validating benchmarks:
+// ***** Building 8 benchmark(s) in Parallel: Start   *****
+// ***** Done, took 00:00:25 (25.92 sec)   *****
+// **************************
+// Benchmark: ProtoVsJson.YugaByte_JsonWrite: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 37852000.00 ns, 2.3658 ms/op
+Pilot  2: 32 op, 82442000.00 ns, 2.5763 ms/op
+Pilot  3: 64 op, 159340000.00 ns, 2.4897 ms/op
+Pilot  4: 128 op, 323283000.00 ns, 2.5256 ms/op
+Pilot  5: 256 op, 626835000.00 ns, 2.4486 ms/op
+
+IdleWarmup  1: 256 op, 5000.00 ns, 19.5313 ns/op
+IdleWarmup  2: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleWarmup  3: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleWarmup  4: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleWarmup  5: 256 op, 2000.00 ns, 7.8125 ns/op
+IdleWarmup  6: 256 op, 1000.00 ns, 3.9063 ns/op
+
+IdleTarget  1: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  2: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  3: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  4: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  5: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  6: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  7: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  8: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  9: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 10: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 11: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 12: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 13: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 14: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 15: 256 op, 1000.00 ns, 3.9063 ns/op
+
+MainWarmup  1: 256 op, 673496000.00 ns, 2.6308 ms/op
+MainWarmup  2: 256 op, 722335000.00 ns, 2.8216 ms/op
+MainWarmup  3: 256 op, 686836000.00 ns, 2.6830 ms/op
+MainWarmup  4: 256 op, 740815000.00 ns, 2.8938 ms/op
+MainWarmup  5: 256 op, 723842000.00 ns, 2.8275 ms/op
+MainWarmup  6: 256 op, 706047000.00 ns, 2.7580 ms/op
+
+// BeforeMainRun
+MainTarget  1: 256 op, 734316000.00 ns, 2.8684 ms/op
+MainTarget  2: 256 op, 732061000.00 ns, 2.8596 ms/op
+MainTarget  3: 256 op, 739462000.00 ns, 2.8885 ms/op
+MainTarget  4: 256 op, 688413000.00 ns, 2.6891 ms/op
+MainTarget  5: 256 op, 685244000.00 ns, 2.6767 ms/op
+MainTarget  6: 256 op, 647932000.00 ns, 2.5310 ms/op
+MainTarget  7: 256 op, 673188000.00 ns, 2.6296 ms/op
+MainTarget  8: 256 op, 658764000.00 ns, 2.5733 ms/op
+MainTarget  9: 256 op, 633896000.00 ns, 2.4762 ms/op
+MainTarget 10: 256 op, 663968000.00 ns, 2.5936 ms/op
+MainTarget 11: 256 op, 676219000.00 ns, 2.6415 ms/op
+MainTarget 12: 256 op, 674558000.00 ns, 2.6350 ms/op
+MainTarget 13: 256 op, 737479000.00 ns, 2.8808 ms/op
+MainTarget 14: 256 op, 677567000.00 ns, 2.6467 ms/op
+MainTarget 15: 256 op, 1086417000.00 ns, 4.2438 ms/op
+MainTarget 16: 256 op, 763447000.00 ns, 2.9822 ms/op
+MainTarget 17: 256 op, 645788000.00 ns, 2.5226 ms/op
+MainTarget 18: 256 op, 636107000.00 ns, 2.4848 ms/op
+MainTarget 19: 256 op, 623893000.00 ns, 2.4371 ms/op
+MainTarget 20: 256 op, 714787000.00 ns, 2.7921 ms/op
+MainTarget 21: 256 op, 623306000.00 ns, 2.4348 ms/op
+MainTarget 22: 256 op, 669217000.00 ns, 2.6141 ms/op
+MainTarget 23: 256 op, 654512000.00 ns, 2.5567 ms/op
+MainTarget 24: 256 op, 634595000.00 ns, 2.4789 ms/op
+MainTarget 25: 256 op, 682537000.00 ns, 2.6662 ms/op
+MainTarget 26: 256 op, 620757000.00 ns, 2.4248 ms/op
+MainTarget 27: 256 op, 630055000.00 ns, 2.4612 ms/op
+MainTarget 28: 256 op, 624170000.00 ns, 2.4382 ms/op
+MainTarget 29: 256 op, 622457000.00 ns, 2.4315 ms/op
+MainTarget 30: 256 op, 677078000.00 ns, 2.6448 ms/op
+MainTarget 31: 256 op, 648144000.00 ns, 2.5318 ms/op
+MainTarget 32: 256 op, 629620000.00 ns, 2.4595 ms/op
+MainTarget 33: 256 op, 661482000.00 ns, 2.5839 ms/op
+MainTarget 34: 256 op, 641274000.00 ns, 2.5050 ms/op
+MainTarget 35: 256 op, 657943000.00 ns, 2.5701 ms/op
+MainTarget 36: 256 op, 645465000.00 ns, 2.5213 ms/op
+MainTarget 37: 256 op, 650331000.00 ns, 2.5404 ms/op
+MainTarget 38: 256 op, 640500000.00 ns, 2.5020 ms/op
+MainTarget 39: 256 op, 656603000.00 ns, 2.5649 ms/op
+MainTarget 40: 256 op, 637828000.00 ns, 2.4915 ms/op
+MainTarget 41: 256 op, 654549000.00 ns, 2.5568 ms/op
+MainTarget 42: 256 op, 631880000.00 ns, 2.4683 ms/op
+MainTarget 43: 256 op, 647229000.00 ns, 2.5282 ms/op
+MainTarget 44: 256 op, 633446000.00 ns, 2.4744 ms/op
+MainTarget 45: 256 op, 629279000.00 ns, 2.4581 ms/op
+MainTarget 46: 256 op, 635517000.00 ns, 2.4825 ms/op
+MainTarget 47: 256 op, 623554000.00 ns, 2.4358 ms/op
+MainTarget 48: 256 op, 643537000.00 ns, 2.5138 ms/op
+MainTarget 49: 256 op, 612012000.00 ns, 2.3907 ms/op
+MainTarget 50: 256 op, 666657000.00 ns, 2.6041 ms/op
+MainTarget 51: 256 op, 687923000.00 ns, 2.6872 ms/op
+MainTarget 52: 256 op, 625835000.00 ns, 2.4447 ms/op
+MainTarget 53: 256 op, 619976000.00 ns, 2.4218 ms/op
+MainTarget 54: 256 op, 624082000.00 ns, 2.4378 ms/op
+MainTarget 55: 256 op, 640285000.00 ns, 2.5011 ms/op
+MainTarget 56: 256 op, 677553000.00 ns, 2.6467 ms/op
+MainTarget 57: 256 op, 652046000.00 ns, 2.5471 ms/op
+MainTarget 58: 256 op, 660507000.00 ns, 2.5801 ms/op
+MainTarget 59: 256 op, 702260000.00 ns, 2.7432 ms/op
+MainTarget 60: 256 op, 610527000.00 ns, 2.3849 ms/op
+MainTarget 61: 256 op, 618173000.00 ns, 2.4147 ms/op
+MainTarget 62: 256 op, 628475000.00 ns, 2.4550 ms/op
+MainTarget 63: 256 op, 670179000.00 ns, 2.6179 ms/op
+MainTarget 64: 256 op, 658483000.00 ns, 2.5722 ms/op
+MainTarget 65: 256 op, 679045000.00 ns, 2.6525 ms/op
+MainTarget 66: 256 op, 646494000.00 ns, 2.5254 ms/op
+MainTarget 67: 256 op, 695988000.00 ns, 2.7187 ms/op
+MainTarget 68: 256 op, 645622000.00 ns, 2.5220 ms/op
+MainTarget 69: 256 op, 680101000.00 ns, 2.6566 ms/op
+
+// AfterMainRun
+Result  1: 256 op, 734315000.00 ns, 2.8684 ms/op
+Result  2: 256 op, 732060000.00 ns, 2.8596 ms/op
+Result  3: 256 op, 739461000.00 ns, 2.8885 ms/op
+Result  4: 256 op, 688412000.00 ns, 2.6891 ms/op
+Result  5: 256 op, 685243000.00 ns, 2.6767 ms/op
+Result  6: 256 op, 647931000.00 ns, 2.5310 ms/op
+Result  7: 256 op, 673187000.00 ns, 2.6296 ms/op
+Result  8: 256 op, 658763000.00 ns, 2.5733 ms/op
+Result  9: 256 op, 633895000.00 ns, 2.4762 ms/op
+Result 10: 256 op, 663967000.00 ns, 2.5936 ms/op
+Result 11: 256 op, 676218000.00 ns, 2.6415 ms/op
+Result 12: 256 op, 674557000.00 ns, 2.6350 ms/op
+Result 13: 256 op, 737478000.00 ns, 2.8808 ms/op
+Result 14: 256 op, 677566000.00 ns, 2.6467 ms/op
+Result 15: 256 op, 645787000.00 ns, 2.5226 ms/op
+Result 16: 256 op, 636106000.00 ns, 2.4848 ms/op
+Result 17: 256 op, 623892000.00 ns, 2.4371 ms/op
+Result 18: 256 op, 714786000.00 ns, 2.7921 ms/op
+Result 19: 256 op, 623305000.00 ns, 2.4348 ms/op
+Result 20: 256 op, 669216000.00 ns, 2.6141 ms/op
+Result 21: 256 op, 654511000.00 ns, 2.5567 ms/op
+Result 22: 256 op, 634594000.00 ns, 2.4789 ms/op
+Result 23: 256 op, 682536000.00 ns, 2.6662 ms/op
+Result 24: 256 op, 620756000.00 ns, 2.4248 ms/op
+Result 25: 256 op, 630054000.00 ns, 2.4611 ms/op
+Result 26: 256 op, 624169000.00 ns, 2.4382 ms/op
+Result 27: 256 op, 622456000.00 ns, 2.4315 ms/op
+Result 28: 256 op, 677077000.00 ns, 2.6448 ms/op
+Result 29: 256 op, 648143000.00 ns, 2.5318 ms/op
+Result 30: 256 op, 629619000.00 ns, 2.4594 ms/op
+Result 31: 256 op, 661481000.00 ns, 2.5839 ms/op
+Result 32: 256 op, 641273000.00 ns, 2.5050 ms/op
+Result 33: 256 op, 657942000.00 ns, 2.5701 ms/op
+Result 34: 256 op, 645464000.00 ns, 2.5213 ms/op
+Result 35: 256 op, 650330000.00 ns, 2.5404 ms/op
+Result 36: 256 op, 640499000.00 ns, 2.5019 ms/op
+Result 37: 256 op, 656602000.00 ns, 2.5649 ms/op
+Result 38: 256 op, 637827000.00 ns, 2.4915 ms/op
+Result 39: 256 op, 654548000.00 ns, 2.5568 ms/op
+Result 40: 256 op, 631879000.00 ns, 2.4683 ms/op
+Result 41: 256 op, 647228000.00 ns, 2.5282 ms/op
+Result 42: 256 op, 633445000.00 ns, 2.4744 ms/op
+Result 43: 256 op, 629278000.00 ns, 2.4581 ms/op
+Result 44: 256 op, 635516000.00 ns, 2.4825 ms/op
+Result 45: 256 op, 623553000.00 ns, 2.4358 ms/op
+Result 46: 256 op, 643536000.00 ns, 2.5138 ms/op
+Result 47: 256 op, 612011000.00 ns, 2.3907 ms/op
+Result 48: 256 op, 666656000.00 ns, 2.6041 ms/op
+Result 49: 256 op, 687922000.00 ns, 2.6872 ms/op
+Result 50: 256 op, 625834000.00 ns, 2.4447 ms/op
+Result 51: 256 op, 619975000.00 ns, 2.4218 ms/op
+Result 52: 256 op, 624081000.00 ns, 2.4378 ms/op
+Result 53: 256 op, 640284000.00 ns, 2.5011 ms/op
+Result 54: 256 op, 677552000.00 ns, 2.6467 ms/op
+Result 55: 256 op, 652045000.00 ns, 2.5471 ms/op
+Result 56: 256 op, 660506000.00 ns, 2.5801 ms/op
+Result 57: 256 op, 702259000.00 ns, 2.7432 ms/op
+Result 58: 256 op, 610526000.00 ns, 2.3849 ms/op
+Result 59: 256 op, 618172000.00 ns, 2.4147 ms/op
+Result 60: 256 op, 628474000.00 ns, 2.4550 ms/op
+Result 61: 256 op, 670178000.00 ns, 2.6179 ms/op
+Result 62: 256 op, 658482000.00 ns, 2.5722 ms/op
+Result 63: 256 op, 679044000.00 ns, 2.6525 ms/op
+Result 64: 256 op, 646493000.00 ns, 2.5254 ms/op
+Result 65: 256 op, 695987000.00 ns, 2.7187 ms/op
+Result 66: 256 op, 645621000.00 ns, 2.5220 ms/op
+Result 67: 256 op, 680100000.00 ns, 2.6566 ms/op
+GC:  0 0 0 915696 256
+
+// AfterAll
+
+Mean = 2.5625 ms, StdErr = 0.0148 ms (0.58%); N = 67, StdDev = 0.1209 ms
+Min = 2.3849 ms, Q1 = 2.4683 ms, Median = 2.5318 ms, Q3 = 2.6415 ms, Max = 2.8885 ms
+IQR = 0.1732 ms, LowerFence = 2.2085 ms, UpperFence = 2.9013 ms
+ConfidenceInterval = [2.5117 ms; 2.6134 ms] (CI 99.9%), Margin = 0.0509 ms (1.99% of Mean)
+Skewness = 0.95, Kurtosis = 3.45
+
+
+// **************************
+// Benchmark: ProtoVsJson.YugaByte_ProtobufWrite: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 38562000.00 ns, 2.4101 ms/op
+Pilot  2: 32 op, 79522000.00 ns, 2.4851 ms/op
+Pilot  3: 64 op, 153407000.00 ns, 2.3970 ms/op
+Pilot  4: 128 op, 314684000.00 ns, 2.4585 ms/op
+Pilot  5: 256 op, 617988000.00 ns, 2.4140 ms/op
+
+IdleWarmup  1: 256 op, 5000.00 ns, 19.5313 ns/op
+IdleWarmup  2: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleWarmup  3: 256 op, 2000.00 ns, 7.8125 ns/op
+IdleWarmup  4: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleWarmup  5: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleWarmup  6: 256 op, 1000.00 ns, 3.9063 ns/op
+
+IdleTarget  1: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  2: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  3: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  4: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  5: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  6: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  7: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  8: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget  9: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 10: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 11: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 12: 256 op, 0.00 ns, 0.0000 ns/op
+IdleTarget 13: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 14: 256 op, 1000.00 ns, 3.9063 ns/op
+IdleTarget 15: 256 op, 1000.00 ns, 3.9063 ns/op
+
+MainWarmup  1: 256 op, 591460000.00 ns, 2.3104 ms/op
+MainWarmup  2: 256 op, 615966000.00 ns, 2.4061 ms/op
+MainWarmup  3: 256 op, 598331000.00 ns, 2.3372 ms/op
+MainWarmup  4: 256 op, 612580000.00 ns, 2.3929 ms/op
+MainWarmup  5: 256 op, 624286000.00 ns, 2.4386 ms/op
+MainWarmup  6: 256 op, 709755000.00 ns, 2.7725 ms/op
+MainWarmup  7: 256 op, 667388000.00 ns, 2.6070 ms/op
+
+// BeforeMainRun
+MainTarget  1: 256 op, 591478000.00 ns, 2.3105 ms/op
+MainTarget  2: 256 op, 607575000.00 ns, 2.3733 ms/op
+MainTarget  3: 256 op, 620380000.00 ns, 2.4234 ms/op
+MainTarget  4: 256 op, 635656000.00 ns, 2.4830 ms/op
+MainTarget  5: 256 op, 608532000.00 ns, 2.3771 ms/op
+MainTarget  6: 256 op, 623056000.00 ns, 2.4338 ms/op
+MainTarget  7: 256 op, 624975000.00 ns, 2.4413 ms/op
+MainTarget  8: 256 op, 630872000.00 ns, 2.4643 ms/op
+MainTarget  9: 256 op, 614471000.00 ns, 2.4003 ms/op
+MainTarget 10: 256 op, 648101000.00 ns, 2.5316 ms/op
+MainTarget 11: 256 op, 595372000.00 ns, 2.3257 ms/op
+MainTarget 12: 256 op, 625713000.00 ns, 2.4442 ms/op
+MainTarget 13: 256 op, 644932000.00 ns, 2.5193 ms/op
+MainTarget 14: 256 op, 640131000.00 ns, 2.5005 ms/op
+MainTarget 15: 256 op, 621413000.00 ns, 2.4274 ms/op
+MainTarget 16: 256 op, 644493000.00 ns, 2.5176 ms/op
+MainTarget 17: 256 op, 605433000.00 ns, 2.3650 ms/op
+MainTarget 18: 256 op, 610986000.00 ns, 2.3867 ms/op
+MainTarget 19: 256 op, 642319000.00 ns, 2.5091 ms/op
+MainTarget 20: 256 op, 614764000.00 ns, 2.4014 ms/op
+MainTarget 21: 256 op, 636677000.00 ns, 2.4870 ms/op
+MainTarget 22: 256 op, 634231000.00 ns, 2.4775 ms/op
+MainTarget 23: 256 op, 608303000.00 ns, 2.3762 ms/op
+MainTarget 24: 256 op, 596981000.00 ns, 2.3320 ms/op
+MainTarget 25: 256 op, 610362000.00 ns, 2.3842 ms/op
+
+// AfterMainRun
+Result  1: 256 op, 591477066.67 ns, 2.3105 ms/op
+Result  2: 256 op, 607574066.67 ns, 2.3733 ms/op
+Result  3: 256 op, 620379066.67 ns, 2.4234 ms/op
+Result  4: 256 op, 635655066.67 ns, 2.4830 ms/op
+Result  5: 256 op, 608531066.67 ns, 2.3771 ms/op
+Result  6: 256 op, 623055066.67 ns, 2.4338 ms/op
+Result  7: 256 op, 624974066.67 ns, 2.4413 ms/op
+Result  8: 256 op, 630871066.67 ns, 2.4643 ms/op
+Result  9: 256 op, 614470066.67 ns, 2.4003 ms/op
+Result 10: 256 op, 648100066.67 ns, 2.5316 ms/op
+Result 11: 256 op, 595371066.67 ns, 2.3257 ms/op
+Result 12: 256 op, 625712066.67 ns, 2.4442 ms/op
+Result 13: 256 op, 644931066.67 ns, 2.5193 ms/op
+Result 14: 256 op, 640130066.67 ns, 2.5005 ms/op
+Result 15: 256 op, 621412066.67 ns, 2.4274 ms/op
+Result 16: 256 op, 644492066.67 ns, 2.5175 ms/op
+Result 17: 256 op, 605432066.67 ns, 2.3650 ms/op
+Result 18: 256 op, 610985066.67 ns, 2.3867 ms/op
+Result 19: 256 op, 642318066.67 ns, 2.5091 ms/op
+Result 20: 256 op, 614763066.67 ns, 2.4014 ms/op
+Result 21: 256 op, 636676066.67 ns, 2.4870 ms/op
+Result 22: 256 op, 634230066.67 ns, 2.4775 ms/op
+Result 23: 256 op, 608302066.67 ns, 2.3762 ms/op
+Result 24: 256 op, 596980066.67 ns, 2.3320 ms/op
+Result 25: 256 op, 610361066.67 ns, 2.3842 ms/op
+GC:  0 0 0 580168 256
+
+// AfterAll
+
+Mean = 2.4277 ms, StdErr = 0.0129 ms (0.53%); N = 25, StdDev = 0.0647 ms
+Min = 2.3105 ms, Q1 = 2.3766 ms, Median = 2.4274 ms, Q3 = 2.4850 ms, Max = 2.5316 ms
+IQR = 0.1084 ms, LowerFence = 2.2140 ms, UpperFence = 2.6476 ms
+ConfidenceInterval = [2.3792 ms; 2.4762 ms] (CI 99.9%), Margin = 0.0485 ms (2.00% of Mean)
+Skewness = -0.05, Kurtosis = 1.78
+
+
+// **************************
+// Benchmark: ProtoVsJson.YugaByte_JsonRead: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 19560000.00 ns, 1.2225 ms/op
+Pilot  2: 32 op, 38012000.00 ns, 1.1879 ms/op
+Pilot  3: 64 op, 77570000.00 ns, 1.2120 ms/op
+Pilot  4: 128 op, 133121000.00 ns, 1.0400 ms/op
+Pilot  5: 256 op, 295460000.00 ns, 1.1541 ms/op
+Pilot  6: 512 op, 522638000.00 ns, 1.0208 ms/op
+
+IdleWarmup  1: 512 op, 6000.00 ns, 11.7188 ns/op
+IdleWarmup  2: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleWarmup  3: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleWarmup  4: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleWarmup  5: 512 op, 2000.00 ns, 3.9063 ns/op
+IdleWarmup  6: 512 op, 1000.00 ns, 1.9531 ns/op
+
+IdleTarget  1: 512 op, 2000.00 ns, 3.9063 ns/op
+IdleTarget  2: 512 op, 2000.00 ns, 3.9063 ns/op
+IdleTarget  3: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget  4: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget  5: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget  6: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget  7: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget  8: 512 op, 2000.00 ns, 3.9063 ns/op
+IdleTarget  9: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget 10: 512 op, 2000.00 ns, 3.9063 ns/op
+IdleTarget 11: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget 12: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget 13: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget 14: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget 15: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget 16: 512 op, 1000.00 ns, 1.9531 ns/op
+IdleTarget 17: 512 op, 1000.00 ns, 1.9531 ns/op
+
+MainWarmup  1: 512 op, 448569000.00 ns, 876.1113 us/op
+MainWarmup  2: 512 op, 452964000.00 ns, 884.6953 us/op
+MainWarmup  3: 512 op, 523538000.00 ns, 1.0225 ms/op
+MainWarmup  4: 512 op, 461868000.00 ns, 902.0859 us/op
+MainWarmup  5: 512 op, 446524000.00 ns, 872.1172 us/op
+MainWarmup  6: 512 op, 441169000.00 ns, 861.6582 us/op
+MainWarmup  7: 512 op, 486642000.00 ns, 950.4727 us/op
+MainWarmup  8: 512 op, 464841000.00 ns, 907.8926 us/op
+
+// BeforeMainRun
+MainTarget  1: 512 op, 449667000.00 ns, 878.2559 us/op
+MainTarget  2: 512 op, 459183000.00 ns, 896.8418 us/op
+MainTarget  3: 512 op, 450306000.00 ns, 879.5039 us/op
+MainTarget  4: 512 op, 481542000.00 ns, 940.5117 us/op
+MainTarget  5: 512 op, 473104000.00 ns, 924.0313 us/op
+MainTarget  6: 512 op, 463038000.00 ns, 904.3711 us/op
+MainTarget  7: 512 op, 441556000.00 ns, 862.4141 us/op
+MainTarget  8: 512 op, 489384000.00 ns, 955.8281 us/op
+MainTarget  9: 512 op, 438681000.00 ns, 856.7988 us/op
+MainTarget 10: 512 op, 463793000.00 ns, 905.8457 us/op
+MainTarget 11: 512 op, 481433000.00 ns, 940.2988 us/op
+MainTarget 12: 512 op, 463259000.00 ns, 904.8027 us/op
+MainTarget 13: 512 op, 450683000.00 ns, 880.2402 us/op
+MainTarget 14: 512 op, 446686000.00 ns, 872.4336 us/op
+MainTarget 15: 512 op, 457948000.00 ns, 894.4297 us/op
+MainTarget 16: 512 op, 447142000.00 ns, 873.3242 us/op
+MainTarget 17: 512 op, 471739000.00 ns, 921.3652 us/op
+MainTarget 18: 512 op, 462137000.00 ns, 902.6113 us/op
+MainTarget 19: 512 op, 461292000.00 ns, 900.9609 us/op
+MainTarget 20: 512 op, 462170000.00 ns, 902.6758 us/op
+MainTarget 21: 512 op, 471244000.00 ns, 920.3984 us/op
+MainTarget 22: 512 op, 455601000.00 ns, 889.8457 us/op
+MainTarget 23: 512 op, 440949000.00 ns, 861.2285 us/op
+MainTarget 24: 512 op, 494620000.00 ns, 966.0547 us/op
+MainTarget 25: 512 op, 527463000.00 ns, 1.0302 ms/op
+MainTarget 26: 512 op, 496074000.00 ns, 968.8945 us/op
+MainTarget 27: 512 op, 479709000.00 ns, 936.9316 us/op
+MainTarget 28: 512 op, 481561000.00 ns, 940.5488 us/op
+MainTarget 29: 512 op, 522938000.00 ns, 1.0214 ms/op
+MainTarget 30: 512 op, 472156000.00 ns, 922.1797 us/op
+MainTarget 31: 512 op, 447005000.00 ns, 873.0566 us/op
+MainTarget 32: 512 op, 454231000.00 ns, 887.1699 us/op
+MainTarget 33: 512 op, 471799000.00 ns, 921.4824 us/op
+MainTarget 34: 512 op, 445534000.00 ns, 870.1836 us/op
+MainTarget 35: 512 op, 432573000.00 ns, 844.8691 us/op
+MainTarget 36: 512 op, 455664000.00 ns, 889.9688 us/op
+MainTarget 37: 512 op, 456535000.00 ns, 891.6699 us/op
+MainTarget 38: 512 op, 490719000.00 ns, 958.4355 us/op
+MainTarget 39: 512 op, 450720000.00 ns, 880.3125 us/op
+MainTarget 40: 512 op, 456419000.00 ns, 891.4434 us/op
+MainTarget 41: 512 op, 494465000.00 ns, 965.7520 us/op
+MainTarget 42: 512 op, 529892000.00 ns, 1.0349 ms/op
+MainTarget 43: 512 op, 462187000.00 ns, 902.7090 us/op
+MainTarget 44: 512 op, 442697000.00 ns, 864.6426 us/op
+MainTarget 45: 512 op, 455777000.00 ns, 890.1895 us/op
+MainTarget 46: 512 op, 492144000.00 ns, 961.2188 us/op
+MainTarget 47: 512 op, 454818000.00 ns, 888.3164 us/op
+MainTarget 48: 512 op, 452929000.00 ns, 884.6270 us/op
+MainTarget 49: 512 op, 462143000.00 ns, 902.6230 us/op
+MainTarget 50: 512 op, 473070000.00 ns, 923.9648 us/op
+MainTarget 51: 512 op, 438592000.00 ns, 856.6250 us/op
+
+// AfterMainRun
+Result  1: 512 op, 449665764.71 ns, 878.2534 us/op
+Result  2: 512 op, 459181764.71 ns, 896.8394 us/op
+Result  3: 512 op, 450304764.71 ns, 879.5015 us/op
+Result  4: 512 op, 481540764.71 ns, 940.5093 us/op
+Result  5: 512 op, 473102764.71 ns, 924.0288 us/op
+Result  6: 512 op, 463036764.71 ns, 904.3687 us/op
+Result  7: 512 op, 441554764.71 ns, 862.4116 us/op
+Result  8: 512 op, 489382764.71 ns, 955.8257 us/op
+Result  9: 512 op, 438679764.71 ns, 856.7964 us/op
+Result 10: 512 op, 463791764.71 ns, 905.8433 us/op
+Result 11: 512 op, 481431764.71 ns, 940.2964 us/op
+Result 12: 512 op, 463257764.71 ns, 904.8003 us/op
+Result 13: 512 op, 450681764.71 ns, 880.2378 us/op
+Result 14: 512 op, 446684764.71 ns, 872.4312 us/op
+Result 15: 512 op, 457946764.71 ns, 894.4273 us/op
+Result 16: 512 op, 447140764.71 ns, 873.3218 us/op
+Result 17: 512 op, 471737764.71 ns, 921.3628 us/op
+Result 18: 512 op, 462135764.71 ns, 902.6089 us/op
+Result 19: 512 op, 461290764.71 ns, 900.9585 us/op
+Result 20: 512 op, 462168764.71 ns, 902.6734 us/op
+Result 21: 512 op, 471242764.71 ns, 920.3960 us/op
+Result 22: 512 op, 455599764.71 ns, 889.8433 us/op
+Result 23: 512 op, 440947764.71 ns, 861.2261 us/op
+Result 24: 512 op, 494618764.71 ns, 966.0523 us/op
+Result 25: 512 op, 496072764.71 ns, 968.8921 us/op
+Result 26: 512 op, 479707764.71 ns, 936.9292 us/op
+Result 27: 512 op, 481559764.71 ns, 940.5464 us/op
+Result 28: 512 op, 522936764.71 ns, 1.0214 ms/op
+Result 29: 512 op, 472154764.71 ns, 922.1773 us/op
+Result 30: 512 op, 447003764.71 ns, 873.0542 us/op
+Result 31: 512 op, 454229764.71 ns, 887.1675 us/op
+Result 32: 512 op, 471797764.71 ns, 921.4800 us/op
+Result 33: 512 op, 445532764.71 ns, 870.1812 us/op
+Result 34: 512 op, 432571764.71 ns, 844.8667 us/op
+Result 35: 512 op, 455662764.71 ns, 889.9663 us/op
+Result 36: 512 op, 456533764.71 ns, 891.6675 us/op
+Result 37: 512 op, 490717764.71 ns, 958.4331 us/op
+Result 38: 512 op, 450718764.71 ns, 880.3101 us/op
+Result 39: 512 op, 456417764.71 ns, 891.4409 us/op
+Result 40: 512 op, 494463764.71 ns, 965.7495 us/op
+Result 41: 512 op, 462185764.71 ns, 902.7066 us/op
+Result 42: 512 op, 442695764.71 ns, 864.6402 us/op
+Result 43: 512 op, 455775764.71 ns, 890.1870 us/op
+Result 44: 512 op, 492142764.71 ns, 961.2163 us/op
+Result 45: 512 op, 454816764.71 ns, 888.3140 us/op
+Result 46: 512 op, 452927764.71 ns, 884.6245 us/op
+Result 47: 512 op, 462141764.71 ns, 902.6206 us/op
+Result 48: 512 op, 473068764.71 ns, 923.9624 us/op
+Result 49: 512 op, 438590764.71 ns, 856.6226 us/op
+GC:  0 0 0 495856 512
+
+// AfterAll
+
+Mean = 905.5945 us, StdErr = 5.1753 us (0.57%); N = 49, StdDev = 36.2269 us
+Min = 844.8667 us, Q1 = 879.8697 us, Median = 900.9585 us, Q3 = 923.9956 us, Max = 1,021.3609 us
+IQR = 44.1260 us, LowerFence = 813.6807 us, UpperFence = 990.1846 us
+ConfidenceInterval = [887.4548 us; 923.7342 us] (CI 99.9%), Margin = 18.1397 us (2.00% of Mean)
+Skewness = 0.83, Kurtosis = 3.49
+
+
+// **************************
+// Benchmark: ProtoVsJson.YugaByte_ProtobufRead: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 18619000.00 ns, 1.1637 ms/op
+Pilot  2: 32 op, 49431000.00 ns, 1.5447 ms/op
+Pilot  3: 64 op, 77227000.00 ns, 1.2067 ms/op
+Pilot  4: 128 op, 138849000.00 ns, 1.0848 ms/op
+Pilot  5: 256 op, 253697000.00 ns, 991.0039 us/op
+Pilot  6: 512 op, 469445000.00 ns, 916.8848 us/op
+Pilot  7: 1024 op, 942931000.00 ns, 920.8311 us/op
+
+IdleWarmup  1: 1024 op, 7000.00 ns, 6.8359 ns/op
+IdleWarmup  2: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleWarmup  3: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleWarmup  4: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleWarmup  5: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleWarmup  6: 1024 op, 2000.00 ns, 1.9531 ns/op
+
+IdleTarget  1: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget  2: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget  3: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget  4: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleTarget  5: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleTarget  6: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget  7: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleTarget  8: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget  9: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleTarget 10: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget 11: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleTarget 12: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget 13: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget 14: 1024 op, 3000.00 ns, 2.9297 ns/op
+IdleTarget 15: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget 16: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget 17: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget 18: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget 19: 1024 op, 2000.00 ns, 1.9531 ns/op
+IdleTarget 20: 1024 op, 2000.00 ns, 1.9531 ns/op
+
+MainWarmup  1: 1024 op, 927240000.00 ns, 905.5078 us/op
+MainWarmup  2: 1024 op, 941929000.00 ns, 919.8525 us/op
+MainWarmup  3: 1024 op, 927580000.00 ns, 905.8398 us/op
+MainWarmup  4: 1024 op, 901543000.00 ns, 880.4131 us/op
+MainWarmup  5: 1024 op, 936533000.00 ns, 914.5830 us/op
+MainWarmup  6: 1024 op, 928718000.00 ns, 906.9512 us/op
+
+// BeforeMainRun
+MainTarget  1: 1024 op, 930165000.00 ns, 908.3643 us/op
+MainTarget  2: 1024 op, 907796000.00 ns, 886.5195 us/op
+MainTarget  3: 1024 op, 949990000.00 ns, 927.7246 us/op
+MainTarget  4: 1024 op, 935522000.00 ns, 913.5957 us/op
+MainTarget  5: 1024 op, 1054184000.00 ns, 1.0295 ms/op
+MainTarget  6: 1024 op, 917473000.00 ns, 895.9697 us/op
+MainTarget  7: 1024 op, 951194000.00 ns, 928.9004 us/op
+MainTarget  8: 1024 op, 899488000.00 ns, 878.4063 us/op
+MainTarget  9: 1024 op, 950556000.00 ns, 928.2773 us/op
+MainTarget 10: 1024 op, 918745000.00 ns, 897.2119 us/op
+MainTarget 11: 1024 op, 938457000.00 ns, 916.4619 us/op
+MainTarget 12: 1024 op, 904824000.00 ns, 883.6172 us/op
+MainTarget 13: 1024 op, 930830000.00 ns, 909.0137 us/op
+MainTarget 14: 1024 op, 950763000.00 ns, 928.4795 us/op
+MainTarget 15: 1024 op, 922702000.00 ns, 901.0762 us/op
+MainTarget 16: 1024 op, 943559000.00 ns, 921.4443 us/op
+MainTarget 17: 1024 op, 907210000.00 ns, 885.9473 us/op
+
+// AfterMainRun
+Result  1: 1024 op, 930162700.00 ns, 908.3620 us/op
+Result  2: 1024 op, 907793700.00 ns, 886.5173 us/op
+Result  3: 1024 op, 949987700.00 ns, 927.7224 us/op
+Result  4: 1024 op, 935519700.00 ns, 913.5935 us/op
+Result  5: 1024 op, 917470700.00 ns, 895.9675 us/op
+Result  6: 1024 op, 951191700.00 ns, 928.8981 us/op
+Result  7: 1024 op, 899485700.00 ns, 878.4040 us/op
+Result  8: 1024 op, 950553700.00 ns, 928.2751 us/op
+Result  9: 1024 op, 918742700.00 ns, 897.2097 us/op
+Result 10: 1024 op, 938454700.00 ns, 916.4597 us/op
+Result 11: 1024 op, 904821700.00 ns, 883.6149 us/op
+Result 12: 1024 op, 930827700.00 ns, 909.0114 us/op
+Result 13: 1024 op, 950760700.00 ns, 928.4772 us/op
+Result 14: 1024 op, 922699700.00 ns, 901.0739 us/op
+Result 15: 1024 op, 943556700.00 ns, 921.4421 us/op
+Result 16: 1024 op, 907207700.00 ns, 885.9450 us/op
+GC:  0 0 0 1007856 1024
+
+// AfterAll
+
+Mean = 906.9359 us, StdErr = 4.4019 us (0.49%); N = 16, StdDev = 17.6075 us
+Min = 878.4040 us, Q1 = 891.2424 us, Median = 908.6867 us, Q3 = 924.5822 us, Max = 928.8981 us
+IQR = 33.3398 us, LowerFence = 841.2326 us, UpperFence = 974.5920 us
+ConfidenceInterval = [889.0081 us; 924.8636 us] (CI 99.9%), Margin = 17.9278 us (1.98% of Mean)
+Skewness = -0.14, Kurtosis = 1.46
+
+
+// **************************
+// Benchmark: ProtoVsJson.Redis_JsonWrite: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 3264000.00 ns, 204.0000 us/op
+Pilot  2: 32 op, 5472000.00 ns, 171.0000 us/op
+Pilot  3: 64 op, 9926000.00 ns, 155.0938 us/op
+Pilot  4: 128 op, 19446000.00 ns, 151.9219 us/op
+Pilot  5: 256 op, 39602000.00 ns, 154.6953 us/op
+Pilot  6: 512 op, 74965000.00 ns, 146.4160 us/op
+Pilot  7: 1024 op, 145350000.00 ns, 141.9434 us/op
+Pilot  8: 2048 op, 321902000.00 ns, 157.1787 us/op
+Pilot  9: 4096 op, 551058000.00 ns, 134.5356 us/op
+
+IdleWarmup  1: 4096 op, 13000.00 ns, 3.1738 ns/op
+IdleWarmup  2: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleWarmup  3: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleWarmup  4: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleWarmup  5: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleWarmup  6: 4096 op, 7000.00 ns, 1.7090 ns/op
+
+IdleTarget  1: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget  2: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget  3: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget  4: 4096 op, 11000.00 ns, 2.6855 ns/op
+IdleTarget  5: 4096 op, 11000.00 ns, 2.6855 ns/op
+IdleTarget  6: 4096 op, 11000.00 ns, 2.6855 ns/op
+IdleTarget  7: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget  8: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget  9: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 10: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 11: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 12: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget 13: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 14: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 15: 4096 op, 10000.00 ns, 2.4414 ns/op
+IdleTarget 16: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 17: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget 18: 4096 op, 8000.00 ns, 1.9531 ns/op
+
+MainWarmup  1: 4096 op, 571670000.00 ns, 139.5679 us/op
+MainWarmup  2: 4096 op, 587349000.00 ns, 143.3958 us/op
+MainWarmup  3: 4096 op, 543366000.00 ns, 132.6577 us/op
+MainWarmup  4: 4096 op, 531430000.00 ns, 129.7437 us/op
+MainWarmup  5: 4096 op, 536695000.00 ns, 131.0291 us/op
+MainWarmup  6: 4096 op, 576709000.00 ns, 140.7981 us/op
+MainWarmup  7: 4096 op, 580635000.00 ns, 141.7566 us/op
+MainWarmup  8: 4096 op, 544349000.00 ns, 132.8977 us/op
+
+// BeforeMainRun
+MainTarget  1: 4096 op, 578248000.00 ns, 141.1738 us/op
+MainTarget  2: 4096 op, 541701000.00 ns, 132.2512 us/op
+MainTarget  3: 4096 op, 544906000.00 ns, 133.0337 us/op
+MainTarget  4: 4096 op, 565621000.00 ns, 138.0911 us/op
+MainTarget  5: 4096 op, 565246000.00 ns, 137.9995 us/op
+MainTarget  6: 4096 op, 551277000.00 ns, 134.5891 us/op
+MainTarget  7: 4096 op, 590801000.00 ns, 144.2385 us/op
+MainTarget  8: 4096 op, 571016000.00 ns, 139.4082 us/op
+MainTarget  9: 4096 op, 549067000.00 ns, 134.0496 us/op
+MainTarget 10: 4096 op, 554163000.00 ns, 135.2937 us/op
+MainTarget 11: 4096 op, 558817000.00 ns, 136.4299 us/op
+MainTarget 12: 4096 op, 562293000.00 ns, 137.2786 us/op
+MainTarget 13: 4096 op, 538504000.00 ns, 131.4707 us/op
+MainTarget 14: 4096 op, 554053000.00 ns, 135.2668 us/op
+MainTarget 15: 4096 op, 576240000.00 ns, 140.6836 us/op
+MainTarget 16: 4096 op, 570018000.00 ns, 139.1646 us/op
+MainTarget 17: 4096 op, 555082000.00 ns, 135.5181 us/op
+MainTarget 18: 4096 op, 587539000.00 ns, 143.4421 us/op
+MainTarget 19: 4096 op, 557594000.00 ns, 136.1313 us/op
+MainTarget 20: 4096 op, 546873000.00 ns, 133.5139 us/op
+MainTarget 21: 4096 op, 542372000.00 ns, 132.4150 us/op
+MainTarget 22: 4096 op, 576355000.00 ns, 140.7117 us/op
+MainTarget 23: 4096 op, 560798000.00 ns, 136.9136 us/op
+MainTarget 24: 4096 op, 568177000.00 ns, 138.7151 us/op
+
+// AfterMainRun
+Result  1: 4096 op, 578239611.11 ns, 141.1718 us/op
+Result  2: 4096 op, 541692611.11 ns, 132.2492 us/op
+Result  3: 4096 op, 544897611.11 ns, 133.0316 us/op
+Result  4: 4096 op, 565612611.11 ns, 138.0890 us/op
+Result  5: 4096 op, 565237611.11 ns, 137.9975 us/op
+Result  6: 4096 op, 551268611.11 ns, 134.5871 us/op
+Result  7: 4096 op, 590792611.11 ns, 144.2365 us/op
+Result  8: 4096 op, 571007611.11 ns, 139.4062 us/op
+Result  9: 4096 op, 549058611.11 ns, 134.0475 us/op
+Result 10: 4096 op, 554154611.11 ns, 135.2917 us/op
+Result 11: 4096 op, 558808611.11 ns, 136.4279 us/op
+Result 12: 4096 op, 562284611.11 ns, 137.2765 us/op
+Result 13: 4096 op, 538495611.11 ns, 131.4687 us/op
+Result 14: 4096 op, 554044611.11 ns, 135.2648 us/op
+Result 15: 4096 op, 576231611.11 ns, 140.6815 us/op
+Result 16: 4096 op, 570009611.11 ns, 139.1625 us/op
+Result 17: 4096 op, 555073611.11 ns, 135.5160 us/op
+Result 18: 4096 op, 587530611.11 ns, 143.4401 us/op
+Result 19: 4096 op, 557585611.11 ns, 136.1293 us/op
+Result 20: 4096 op, 546864611.11 ns, 133.5119 us/op
+Result 21: 4096 op, 542363611.11 ns, 132.4130 us/op
+Result 22: 4096 op, 576346611.11 ns, 140.7096 us/op
+Result 23: 4096 op, 560789611.11 ns, 136.9115 us/op
+Result 24: 4096 op, 568168611.11 ns, 138.7130 us/op
+GC:  1 0 0 9339768 4096
+
+// AfterAll
+
+Mean = 136.9889 us, StdErr = 0.7123 us (0.52%); N = 24, StdDev = 3.4897 us
+Min = 131.4687 us, Q1 = 134.3173 us, Median = 136.6697 us, Q3 = 139.2843 us, Max = 144.2365 us
+IQR = 4.9670 us, LowerFence = 126.8667 us, UpperFence = 146.7349 us
+ConfidenceInterval = [134.3051 us; 139.6728 us] (CI 99.9%), Margin = 2.6838 us (1.96% of Mean)
+Skewness = 0.32, Kurtosis = 2.15
+
+
+// **************************
+// Benchmark: ProtoVsJson.Redis_ProtobufWrite: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 3856000.00 ns, 241.0000 us/op
+Pilot  2: 32 op, 6028000.00 ns, 188.3750 us/op
+Pilot  3: 64 op, 9915000.00 ns, 154.9219 us/op
+Pilot  4: 128 op, 19218000.00 ns, 150.1406 us/op
+Pilot  5: 256 op, 43331000.00 ns, 169.2617 us/op
+Pilot  6: 512 op, 77388000.00 ns, 151.1484 us/op
+Pilot  7: 1024 op, 151769000.00 ns, 148.2119 us/op
+Pilot  8: 2048 op, 304696000.00 ns, 148.7773 us/op
+Pilot  9: 4096 op, 534054000.00 ns, 130.3843 us/op
+
+IdleWarmup  1: 4096 op, 14000.00 ns, 3.4180 ns/op
+IdleWarmup  2: 4096 op, 17000.00 ns, 4.1504 ns/op
+IdleWarmup  3: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleWarmup  4: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleWarmup  5: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleWarmup  6: 4096 op, 8000.00 ns, 1.9531 ns/op
+
+IdleTarget  1: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget  2: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget  3: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget  4: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget  5: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget  6: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget  7: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget  8: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget  9: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 10: 4096 op, 11000.00 ns, 2.6855 ns/op
+IdleTarget 11: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 12: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 13: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget 14: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 15: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget 16: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget 17: 4096 op, 8000.00 ns, 1.9531 ns/op
+IdleTarget 18: 4096 op, 7000.00 ns, 1.7090 ns/op
+IdleTarget 19: 4096 op, 11000.00 ns, 2.6855 ns/op
+IdleTarget 20: 4096 op, 7000.00 ns, 1.7090 ns/op
+
+MainWarmup  1: 4096 op, 550533000.00 ns, 134.4075 us/op
+MainWarmup  2: 4096 op, 580773000.00 ns, 141.7903 us/op
+MainWarmup  3: 4096 op, 559748000.00 ns, 136.6572 us/op
+MainWarmup  4: 4096 op, 539918000.00 ns, 131.8159 us/op
+MainWarmup  5: 4096 op, 543042000.00 ns, 132.5786 us/op
+MainWarmup  6: 4096 op, 576076000.00 ns, 140.6436 us/op
+MainWarmup  7: 4096 op, 556582000.00 ns, 135.8843 us/op
+
+// BeforeMainRun
+MainTarget  1: 4096 op, 538043000.00 ns, 131.3582 us/op
+MainTarget  2: 4096 op, 590082000.00 ns, 144.0630 us/op
+MainTarget  3: 4096 op, 653692000.00 ns, 159.5928 us/op
+MainTarget  4: 4096 op, 585641000.00 ns, 142.9788 us/op
+MainTarget  5: 4096 op, 584146000.00 ns, 142.6138 us/op
+MainTarget  6: 4096 op, 600972000.00 ns, 146.7217 us/op
+MainTarget  7: 4096 op, 549297000.00 ns, 134.1057 us/op
+MainTarget  8: 4096 op, 563865000.00 ns, 137.6624 us/op
+MainTarget  9: 4096 op, 578408000.00 ns, 141.2129 us/op
+MainTarget 10: 4096 op, 538599000.00 ns, 131.4939 us/op
+MainTarget 11: 4096 op, 527446000.00 ns, 128.7710 us/op
+MainTarget 12: 4096 op, 523435000.00 ns, 127.7917 us/op
+MainTarget 13: 4096 op, 553277000.00 ns, 135.0774 us/op
+MainTarget 14: 4096 op, 547754000.00 ns, 133.7290 us/op
+MainTarget 15: 4096 op, 554662000.00 ns, 135.4155 us/op
+MainTarget 16: 4096 op, 571793000.00 ns, 139.5979 us/op
+MainTarget 17: 4096 op, 576307000.00 ns, 140.7000 us/op
+MainTarget 18: 4096 op, 548896000.00 ns, 134.0078 us/op
+MainTarget 19: 4096 op, 576436000.00 ns, 140.7314 us/op
+MainTarget 20: 4096 op, 544647000.00 ns, 132.9705 us/op
+MainTarget 21: 4096 op, 539839000.00 ns, 131.7966 us/op
+MainTarget 22: 4096 op, 561127000.00 ns, 136.9939 us/op
+MainTarget 23: 4096 op, 574789000.00 ns, 140.3293 us/op
+MainTarget 24: 4096 op, 555209000.00 ns, 135.5491 us/op
+MainTarget 25: 4096 op, 557926000.00 ns, 136.2124 us/op
+MainTarget 26: 4096 op, 583163000.00 ns, 142.3738 us/op
+MainTarget 27: 4096 op, 557213000.00 ns, 136.0383 us/op
+MainTarget 28: 4096 op, 552247000.00 ns, 134.8259 us/op
+MainTarget 29: 4096 op, 550449000.00 ns, 134.3870 us/op
+MainTarget 30: 4096 op, 551986000.00 ns, 134.7622 us/op
+MainTarget 31: 4096 op, 543741000.00 ns, 132.7493 us/op
+MainTarget 32: 4096 op, 590059000.00 ns, 144.0574 us/op
+MainTarget 33: 4096 op, 659158000.00 ns, 160.9272 us/op
+MainTarget 34: 4096 op, 540867000.00 ns, 132.0476 us/op
+MainTarget 35: 4096 op, 547372000.00 ns, 133.6357 us/op
+MainTarget 36: 4096 op, 577793000.00 ns, 141.0627 us/op
+MainTarget 37: 4096 op, 535562000.00 ns, 130.7524 us/op
+MainTarget 38: 4096 op, 559254000.00 ns, 136.5366 us/op
+MainTarget 39: 4096 op, 569259000.00 ns, 138.9792 us/op
+
+// AfterMainRun
+Result  1: 4096 op, 538035150.00 ns, 131.3562 us/op
+Result  2: 4096 op, 590074150.00 ns, 144.0611 us/op
+Result  3: 4096 op, 585633150.00 ns, 142.9768 us/op
+Result  4: 4096 op, 584138150.00 ns, 142.6119 us/op
+Result  5: 4096 op, 600964150.00 ns, 146.7198 us/op
+Result  6: 4096 op, 549289150.00 ns, 134.1038 us/op
+Result  7: 4096 op, 563857150.00 ns, 137.6604 us/op
+Result  8: 4096 op, 578400150.00 ns, 141.2110 us/op
+Result  9: 4096 op, 538591150.00 ns, 131.4920 us/op
+Result 10: 4096 op, 527438150.00 ns, 128.7691 us/op
+Result 11: 4096 op, 523427150.00 ns, 127.7898 us/op
+Result 12: 4096 op, 553269150.00 ns, 135.0755 us/op
+Result 13: 4096 op, 547746150.00 ns, 133.7271 us/op
+Result 14: 4096 op, 554654150.00 ns, 135.4136 us/op
+Result 15: 4096 op, 571785150.00 ns, 139.5960 us/op
+Result 16: 4096 op, 576299150.00 ns, 140.6980 us/op
+Result 17: 4096 op, 548888150.00 ns, 134.0059 us/op
+Result 18: 4096 op, 576428150.00 ns, 140.7295 us/op
+Result 19: 4096 op, 544639150.00 ns, 132.9685 us/op
+Result 20: 4096 op, 539831150.00 ns, 131.7947 us/op
+Result 21: 4096 op, 561119150.00 ns, 136.9920 us/op
+Result 22: 4096 op, 574781150.00 ns, 140.3274 us/op
+Result 23: 4096 op, 555201150.00 ns, 135.5472 us/op
+Result 24: 4096 op, 557918150.00 ns, 136.2105 us/op
+Result 25: 4096 op, 583155150.00 ns, 142.3719 us/op
+Result 26: 4096 op, 557205150.00 ns, 136.0364 us/op
+Result 27: 4096 op, 552239150.00 ns, 134.8240 us/op
+Result 28: 4096 op, 550441150.00 ns, 134.3850 us/op
+Result 29: 4096 op, 551978150.00 ns, 134.7603 us/op
+Result 30: 4096 op, 543733150.00 ns, 132.7474 us/op
+Result 31: 4096 op, 590051150.00 ns, 144.0555 us/op
+Result 32: 4096 op, 540859150.00 ns, 132.0457 us/op
+Result 33: 4096 op, 547364150.00 ns, 133.6338 us/op
+Result 34: 4096 op, 577785150.00 ns, 141.0608 us/op
+Result 35: 4096 op, 535554150.00 ns, 130.7505 us/op
+Result 36: 4096 op, 559246150.00 ns, 136.5347 us/op
+Result 37: 4096 op, 569251150.00 ns, 138.9773 us/op
+GC:  1 0 0 9340048 4096
+
+// AfterAll
+
+Mean = 136.5952 us, StdErr = 0.7623 us (0.56%); N = 37, StdDev = 4.6367 us
+Min = 127.7898 us, Q1 = 133.3012 us, Median = 135.5472 us, Q3 = 140.7138 us, Max = 146.7198 us
+IQR = 7.4126 us, LowerFence = 122.1823 us, UpperFence = 151.8327 us
+ConfidenceInterval = [133.8646 us; 139.3257 us] (CI 99.9%), Margin = 2.7306 us (2.00% of Mean)
+Skewness = 0.24, Kurtosis = 2.14
+
+
+// **************************
+// Benchmark: ProtoVsJson.Redis_JsonRead: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 2984000.00 ns, 186.5000 us/op
+Pilot  2: 32 op, 5050000.00 ns, 157.8125 us/op
+Pilot  3: 64 op, 7893000.00 ns, 123.3281 us/op
+Pilot  4: 128 op, 19646000.00 ns, 153.4844 us/op
+Pilot  5: 256 op, 36384000.00 ns, 142.1250 us/op
+Pilot  6: 512 op, 67706000.00 ns, 132.2383 us/op
+Pilot  7: 1024 op, 128780000.00 ns, 125.7617 us/op
+Pilot  8: 2048 op, 257741000.00 ns, 125.8501 us/op
+Pilot  9: 4096 op, 490980000.00 ns, 119.8682 us/op
+Pilot 10: 8192 op, 991148000.00 ns, 120.9897 us/op
+
+IdleWarmup  1: 8192 op, 19000.00 ns, 2.3193 ns/op
+IdleWarmup  2: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleWarmup  3: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleWarmup  4: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleWarmup  5: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleWarmup  6: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleWarmup  7: 8192 op, 15000.00 ns, 1.8311 ns/op
+
+IdleTarget  1: 8192 op, 29000.00 ns, 3.5400 ns/op
+IdleTarget  2: 8192 op, 19000.00 ns, 2.3193 ns/op
+IdleTarget  3: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleTarget  4: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget  5: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget  6: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget  7: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget  8: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget  9: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget 10: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 11: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 12: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget 13: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 14: 8192 op, 20000.00 ns, 2.4414 ns/op
+IdleTarget 15: 8192 op, 29000.00 ns, 3.5400 ns/op
+IdleTarget 16: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget 17: 8192 op, 16000.00 ns, 1.9531 ns/op
+
+MainWarmup  1: 8192 op, 989923000.00 ns, 120.8402 us/op
+MainWarmup  2: 8192 op, 986330000.00 ns, 120.4016 us/op
+MainWarmup  3: 8192 op, 961141000.00 ns, 117.3268 us/op
+MainWarmup  4: 8192 op, 982820000.00 ns, 119.9731 us/op
+MainWarmup  5: 8192 op, 948577000.00 ns, 115.7931 us/op
+MainWarmup  6: 8192 op, 964570000.00 ns, 117.7454 us/op
+MainWarmup  7: 8192 op, 916662000.00 ns, 111.8972 us/op
+
+// BeforeMainRun
+MainTarget  1: 8192 op, 910622000.00 ns, 111.1599 us/op
+MainTarget  2: 8192 op, 946851000.00 ns, 115.5824 us/op
+MainTarget  3: 8192 op, 913100000.00 ns, 111.4624 us/op
+MainTarget  4: 8192 op, 965662000.00 ns, 117.8787 us/op
+MainTarget  5: 8192 op, 941484000.00 ns, 114.9272 us/op
+MainTarget  6: 8192 op, 974089000.00 ns, 118.9073 us/op
+MainTarget  7: 8192 op, 918564000.00 ns, 112.1294 us/op
+MainTarget  8: 8192 op, 941654000.00 ns, 114.9480 us/op
+MainTarget  9: 8192 op, 975132000.00 ns, 119.0347 us/op
+MainTarget 10: 8192 op, 967774000.00 ns, 118.1365 us/op
+MainTarget 11: 8192 op, 954163000.00 ns, 116.4750 us/op
+MainTarget 12: 8192 op, 947154000.00 ns, 115.6194 us/op
+MainTarget 13: 8192 op, 985518000.00 ns, 120.3025 us/op
+MainTarget 14: 8192 op, 993198000.00 ns, 121.2400 us/op
+MainTarget 15: 8192 op, 1026001000.00 ns, 125.2443 us/op
+MainTarget 16: 8192 op, 974385000.00 ns, 118.9435 us/op
+MainTarget 17: 8192 op, 930111000.00 ns, 113.5389 us/op
+MainTarget 18: 8192 op, 961770000.00 ns, 117.4036 us/op
+MainTarget 19: 8192 op, 913285000.00 ns, 111.4850 us/op
+MainTarget 20: 8192 op, 932068000.00 ns, 113.7778 us/op
+MainTarget 21: 8192 op, 952132000.00 ns, 116.2271 us/op
+MainTarget 22: 8192 op, 953475000.00 ns, 116.3910 us/op
+MainTarget 23: 8192 op, 921281000.00 ns, 112.4611 us/op
+MainTarget 24: 8192 op, 932744000.00 ns, 113.8604 us/op
+MainTarget 25: 8192 op, 939949000.00 ns, 114.7399 us/op
+
+// AfterMainRun
+Result  1: 8192 op, 910604588.24 ns, 111.1578 us/op
+Result  2: 8192 op, 946833588.24 ns, 115.5803 us/op
+Result  3: 8192 op, 913082588.24 ns, 111.4603 us/op
+Result  4: 8192 op, 965644588.24 ns, 117.8765 us/op
+Result  5: 8192 op, 941466588.24 ns, 114.9251 us/op
+Result  6: 8192 op, 974071588.24 ns, 118.9052 us/op
+Result  7: 8192 op, 918546588.24 ns, 112.1273 us/op
+Result  8: 8192 op, 941636588.24 ns, 114.9459 us/op
+Result  9: 8192 op, 975114588.24 ns, 119.0325 us/op
+Result 10: 8192 op, 967756588.24 ns, 118.1343 us/op
+Result 11: 8192 op, 954145588.24 ns, 116.4729 us/op
+Result 12: 8192 op, 947136588.24 ns, 115.6173 us/op
+Result 13: 8192 op, 985500588.24 ns, 120.3004 us/op
+Result 14: 8192 op, 993180588.24 ns, 121.2379 us/op
+Result 15: 8192 op, 1025983588.24 ns, 125.2421 us/op
+Result 16: 8192 op, 974367588.24 ns, 118.9414 us/op
+Result 17: 8192 op, 930093588.24 ns, 113.5368 us/op
+Result 18: 8192 op, 961752588.24 ns, 117.4014 us/op
+Result 19: 8192 op, 913267588.24 ns, 111.4829 us/op
+Result 20: 8192 op, 932050588.24 ns, 113.7757 us/op
+Result 21: 8192 op, 952114588.24 ns, 116.2249 us/op
+Result 22: 8192 op, 953457588.24 ns, 116.3889 us/op
+Result 23: 8192 op, 921263588.24 ns, 112.4589 us/op
+Result 24: 8192 op, 932726588.24 ns, 113.8582 us/op
+Result 25: 8192 op, 939931588.24 ns, 114.7377 us/op
+GC:  1 0 0 8061408 8192
+
+// AfterAll
+
+Mean = 116.0729 us, StdErr = 0.6828 us (0.59%); N = 25, StdDev = 3.4141 us
+Min = 111.1578 us, Q1 = 113.6563 us, Median = 115.6173 us, Q3 = 118.5198 us, Max = 125.2421 us
+IQR = 4.8635 us, LowerFence = 106.3610 us, UpperFence = 125.8151 us
+ConfidenceInterval = [113.5155 us; 118.6304 us] (CI 99.9%), Margin = 2.5574 us (2.20% of Mean)
+Skewness = 0.61, Kurtosis = 3.04
+
+
+// **************************
+// Benchmark: ProtoVsJson.Redis_ProtobufRead: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+Pilot  1: 16 op, 2583000.00 ns, 161.4375 us/op
+Pilot  2: 32 op, 5839000.00 ns, 182.4688 us/op
+Pilot  3: 64 op, 9159000.00 ns, 143.1094 us/op
+Pilot  4: 128 op, 20174000.00 ns, 157.6094 us/op
+Pilot  5: 256 op, 35828000.00 ns, 139.9531 us/op
+Pilot  6: 512 op, 64466000.00 ns, 125.9102 us/op
+Pilot  7: 1024 op, 121309000.00 ns, 118.4658 us/op
+Pilot  8: 2048 op, 245815000.00 ns, 120.0269 us/op
+Pilot  9: 4096 op, 466741000.00 ns, 113.9504 us/op
+Pilot 10: 8192 op, 973701000.00 ns, 118.8600 us/op
+
+IdleWarmup  1: 8192 op, 18000.00 ns, 2.1973 ns/op
+IdleWarmup  2: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleWarmup  3: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleWarmup  4: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleWarmup  5: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleWarmup  6: 8192 op, 14000.00 ns, 1.7090 ns/op
+
+IdleTarget  1: 8192 op, 14000.00 ns, 1.7090 ns/op
+IdleTarget  2: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget  3: 8192 op, 25000.00 ns, 3.0518 ns/op
+IdleTarget  4: 8192 op, 18000.00 ns, 2.1973 ns/op
+IdleTarget  5: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget  6: 8192 op, 19000.00 ns, 2.3193 ns/op
+IdleTarget  7: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget  8: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget  9: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget 10: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 11: 8192 op, 24000.00 ns, 2.9297 ns/op
+IdleTarget 12: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 13: 8192 op, 22000.00 ns, 2.6855 ns/op
+IdleTarget 14: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 15: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 16: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget 17: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 18: 8192 op, 15000.00 ns, 1.8311 ns/op
+IdleTarget 19: 8192 op, 16000.00 ns, 1.9531 ns/op
+IdleTarget 20: 8192 op, 15000.00 ns, 1.8311 ns/op
+
+MainWarmup  1: 8192 op, 920316000.00 ns, 112.3433 us/op
+MainWarmup  2: 8192 op, 949727000.00 ns, 115.9335 us/op
+MainWarmup  3: 8192 op, 923414000.00 ns, 112.7214 us/op
+MainWarmup  4: 8192 op, 949668000.00 ns, 115.9263 us/op
+MainWarmup  5: 8192 op, 913273000.00 ns, 111.4835 us/op
+MainWarmup  6: 8192 op, 939831000.00 ns, 114.7255 us/op
+
+// BeforeMainRun
+MainTarget  1: 8192 op, 947080000.00 ns, 115.6104 us/op
+MainTarget  2: 8192 op, 979524000.00 ns, 119.5708 us/op
+MainTarget  3: 8192 op, 912855000.00 ns, 111.4325 us/op
+MainTarget  4: 8192 op, 955418000.00 ns, 116.6282 us/op
+MainTarget  5: 8192 op, 917018000.00 ns, 111.9407 us/op
+MainTarget  6: 8192 op, 994192000.00 ns, 121.3613 us/op
+MainTarget  7: 8192 op, 923964000.00 ns, 112.7886 us/op
+MainTarget  8: 8192 op, 944608000.00 ns, 115.3086 us/op
+MainTarget  9: 8192 op, 915656000.00 ns, 111.7744 us/op
+MainTarget 10: 8192 op, 918785000.00 ns, 112.1564 us/op
+MainTarget 11: 8192 op, 925980000.00 ns, 113.0347 us/op
+MainTarget 12: 8192 op, 913353000.00 ns, 111.4933 us/op
+MainTarget 13: 8192 op, 1115801000.00 ns, 136.2062 us/op
+MainTarget 14: 8192 op, 902891000.00 ns, 110.2162 us/op
+MainTarget 15: 8192 op, 947168000.00 ns, 115.6211 us/op
+MainTarget 16: 8192 op, 933912000.00 ns, 114.0029 us/op
+MainTarget 17: 8192 op, 949165000.00 ns, 115.8649 us/op
+MainTarget 18: 8192 op, 917739000.00 ns, 112.0287 us/op
+MainTarget 19: 8192 op, 944544000.00 ns, 115.3008 us/op
+MainTarget 20: 8192 op, 920313000.00 ns, 112.3429 us/op
+MainTarget 21: 8192 op, 956889000.00 ns, 116.8077 us/op
+MainTarget 22: 8192 op, 946894000.00 ns, 115.5876 us/op
+MainTarget 23: 8192 op, 991733000.00 ns, 121.0612 us/op
+MainTarget 24: 8192 op, 918084000.00 ns, 112.0708 us/op
+MainTarget 25: 8192 op, 965340000.00 ns, 117.8394 us/op
+MainTarget 26: 8192 op, 929601000.00 ns, 113.4767 us/op
+
+// AfterMainRun
+Result  1: 8192 op, 947062950.00 ns, 115.6083 us/op
+Result  2: 8192 op, 979506950.00 ns, 119.5687 us/op
+Result  3: 8192 op, 912837950.00 ns, 111.4304 us/op
+Result  4: 8192 op, 955400950.00 ns, 116.6261 us/op
+Result  5: 8192 op, 917000950.00 ns, 111.9386 us/op
+Result  6: 8192 op, 994174950.00 ns, 121.3592 us/op
+Result  7: 8192 op, 923946950.00 ns, 112.7865 us/op
+Result  8: 8192 op, 944590950.00 ns, 115.3065 us/op
+Result  9: 8192 op, 915638950.00 ns, 111.7723 us/op
+Result 10: 8192 op, 918767950.00 ns, 112.1543 us/op
+Result 11: 8192 op, 925962950.00 ns, 113.0326 us/op
+Result 12: 8192 op, 913335950.00 ns, 111.4912 us/op
+Result 13: 8192 op, 902873950.00 ns, 110.2141 us/op
+Result 14: 8192 op, 947150950.00 ns, 115.6190 us/op
+Result 15: 8192 op, 933894950.00 ns, 114.0008 us/op
+Result 16: 8192 op, 949147950.00 ns, 115.8628 us/op
+Result 17: 8192 op, 917721950.00 ns, 112.0266 us/op
+Result 18: 8192 op, 944526950.00 ns, 115.2987 us/op
+Result 19: 8192 op, 920295950.00 ns, 112.3408 us/op
+Result 20: 8192 op, 956871950.00 ns, 116.8057 us/op
+Result 21: 8192 op, 946876950.00 ns, 115.5856 us/op
+Result 22: 8192 op, 991715950.00 ns, 121.0591 us/op
+Result 23: 8192 op, 918066950.00 ns, 112.0687 us/op
+Result 24: 8192 op, 965322950.00 ns, 117.8373 us/op
+Result 25: 8192 op, 929583950.00 ns, 113.4746 us/op
+GC:  1 0 0 8061408 8192
+
+// AfterAll
+
+Mean = 114.6107 us, StdErr = 0.6092 us (0.53%); N = 25, StdDev = 3.0459 us
+Min = 110.2141 us, Q1 = 112.0477 us, Median = 114.0008 us, Q3 = 116.2444 us, Max = 121.3592 us
+IQR = 4.1968 us, LowerFence = 105.7525 us, UpperFence = 122.5396 us
+ConfidenceInterval = [112.3291 us; 116.8924 us] (CI 99.9%), Margin = 2.2816 us (1.99% of Mean)
+Skewness = 0.7, Kurtosis = 2.52
+
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Orleans.YugaByteDB.Benchmarks.ProtoVsJson-report.csv
+  BenchmarkDotNet.Artifacts/results/Orleans.YugaByteDB.Benchmarks.ProtoVsJson-report-github.md
+  BenchmarkDotNet.Artifacts/results/Orleans.YugaByteDB.Benchmarks.ProtoVsJson-report.html
+
+// * Detailed results *
+ProtoVsJson.YugaByte_JsonWrite: DefaultJob
+Runtime = .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 2.5625 ms, StdErr = 0.0148 ms (0.58%); N = 67, StdDev = 0.1209 ms
+Min = 2.3849 ms, Q1 = 2.4683 ms, Median = 2.5318 ms, Q3 = 2.6415 ms, Max = 2.8885 ms
+IQR = 0.1732 ms, LowerFence = 2.2085 ms, UpperFence = 2.9013 ms
+ConfidenceInterval = [2.5117 ms; 2.6134 ms] (CI 99.9%), Margin = 0.0509 ms (1.99% of Mean)
+Skewness = 0.95, Kurtosis = 3.45
+
+
+ProtoVsJson.YugaByte_ProtobufWrite: DefaultJob
+Runtime = .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 2.4277 ms, StdErr = 0.0129 ms (0.53%); N = 25, StdDev = 0.0647 ms
+Min = 2.3105 ms, Q1 = 2.3766 ms, Median = 2.4274 ms, Q3 = 2.4850 ms, Max = 2.5316 ms
+IQR = 0.1084 ms, LowerFence = 2.2140 ms, UpperFence = 2.6476 ms
+ConfidenceInterval = [2.3792 ms; 2.4762 ms] (CI 99.9%), Margin = 0.0485 ms (2.00% of Mean)
+Skewness = -0.05, Kurtosis = 1.78
+
+
+ProtoVsJson.YugaByte_JsonRead: DefaultJob
+Runtime = .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 905.5945 us, StdErr = 5.1753 us (0.57%); N = 49, StdDev = 36.2269 us
+Min = 844.8667 us, Q1 = 879.8697 us, Median = 900.9585 us, Q3 = 923.9956 us, Max = 1,021.3609 us
+IQR = 44.1260 us, LowerFence = 813.6807 us, UpperFence = 990.1846 us
+ConfidenceInterval = [887.4548 us; 923.7342 us] (CI 99.9%), Margin = 18.1397 us (2.00% of Mean)
+Skewness = 0.83, Kurtosis = 3.49
+
+
+ProtoVsJson.YugaByte_ProtobufRead: DefaultJob
+Runtime = .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 906.9359 us, StdErr = 4.4019 us (0.49%); N = 16, StdDev = 17.6075 us
+Min = 878.4040 us, Q1 = 891.2424 us, Median = 908.6867 us, Q3 = 924.5822 us, Max = 928.8981 us
+IQR = 33.3398 us, LowerFence = 841.2326 us, UpperFence = 974.5920 us
+ConfidenceInterval = [889.0081 us; 924.8636 us] (CI 99.9%), Margin = 17.9278 us (1.98% of Mean)
+Skewness = -0.14, Kurtosis = 1.46
+
+
+ProtoVsJson.Redis_JsonWrite: DefaultJob
+Runtime = .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 136.9889 us, StdErr = 0.7123 us (0.52%); N = 24, StdDev = 3.4897 us
+Min = 131.4687 us, Q1 = 134.3173 us, Median = 136.6697 us, Q3 = 139.2843 us, Max = 144.2365 us
+IQR = 4.9670 us, LowerFence = 126.8667 us, UpperFence = 146.7349 us
+ConfidenceInterval = [134.3051 us; 139.6728 us] (CI 99.9%), Margin = 2.6838 us (1.96% of Mean)
+Skewness = 0.32, Kurtosis = 2.15
+
+
+ProtoVsJson.Redis_ProtobufWrite: DefaultJob
+Runtime = .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 136.5952 us, StdErr = 0.7623 us (0.56%); N = 37, StdDev = 4.6367 us
+Min = 127.7898 us, Q1 = 133.3012 us, Median = 135.5472 us, Q3 = 140.7138 us, Max = 146.7198 us
+IQR = 7.4126 us, LowerFence = 122.1823 us, UpperFence = 151.8327 us
+ConfidenceInterval = [133.8646 us; 139.3257 us] (CI 99.9%), Margin = 2.7306 us (2.00% of Mean)
+Skewness = 0.24, Kurtosis = 2.14
+
+
+ProtoVsJson.Redis_JsonRead: DefaultJob
+Runtime = .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 116.0729 us, StdErr = 0.6828 us (0.59%); N = 25, StdDev = 3.4141 us
+Min = 111.1578 us, Q1 = 113.6563 us, Median = 115.6173 us, Q3 = 118.5198 us, Max = 125.2421 us
+IQR = 4.8635 us, LowerFence = 106.3610 us, UpperFence = 125.8151 us
+ConfidenceInterval = [113.5155 us; 118.6304 us] (CI 99.9%), Margin = 2.5574 us (2.20% of Mean)
+Skewness = 0.61, Kurtosis = 3.04
+
+
+ProtoVsJson.Redis_ProtobufRead: DefaultJob
+Runtime = .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 114.6107 us, StdErr = 0.6092 us (0.53%); N = 25, StdDev = 3.0459 us
+Min = 110.2141 us, Q1 = 112.0477 us, Median = 114.0008 us, Q3 = 116.2444 us, Max = 121.3592 us
+IQR = 4.1968 us, LowerFence = 105.7525 us, UpperFence = 122.5396 us
+ConfidenceInterval = [112.3291 us; 116.8924 us] (CI 99.9%), Margin = 2.2816 us (1.99% of Mean)
+Skewness = 0.7, Kurtosis = 2.52
+
+
+Total time: 00:04:40 (280.72 sec)
+
+// * Summary *
+
+BenchmarkDotNet=v0.10.12, OS=macOS 10.13.2 (17C88) [Darwin 17.3.0]
+Intel Core i7-4770HQ CPU 2.20GHz (Haswell), 1 CPU, 8 logical cores and 4 physical cores
+.NET Core SDK=2.0.3
+  [Host]     : .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+  DefaultJob : .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+
+
+                 Method |       Mean |     Error |     StdDev |  Gen 0 | Allocated |
+----------------------- |-----------:|----------:|-----------:|-------:|----------:|
+     YugaByte_JsonWrite | 2,562.5 us | 50.881 us | 120.924 us |      - |    3577 B |
+ YugaByte_ProtobufWrite | 2,427.7 us | 48.483 us |  64.724 us |      - |    2266 B |
+      YugaByte_JsonRead |   905.6 us | 18.140 us |  36.227 us |      - |     968 B |
+  YugaByte_ProtobufRead |   906.9 us | 17.928 us |  17.607 us |      - |     984 B |
+        Redis_JsonWrite |   137.0 us |  2.684 us |   3.490 us | 0.2441 |    2280 B |
+    Redis_ProtobufWrite |   136.6 us |  2.731 us |   4.637 us | 0.2441 |    2280 B |
+         Redis_JsonRead |   116.1 us |  2.557 us |   3.414 us | 0.1221 |     984 B |
+     Redis_ProtobufRead |   114.6 us |  2.282 us |   3.046 us | 0.1221 |     984 B |
+
+// * Hints *
+Outliers
+  ProtoVsJson.YugaByte_JsonWrite: Default    -> 2 outliers were removed
+  ProtoVsJson.YugaByte_JsonRead: Default     -> 2 outliers were removed
+  ProtoVsJson.YugaByte_ProtobufRead: Default -> 1 outlier  was  removed
+  ProtoVsJson.Redis_ProtobufWrite: Default   -> 2 outliers were removed
+  ProtoVsJson.Redis_ProtobufRead: Default    -> 1 outlier  was  removed
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Gen 0     : GC Generation 0 collects per 1k Operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 us      : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// * Artifacts cleanup *

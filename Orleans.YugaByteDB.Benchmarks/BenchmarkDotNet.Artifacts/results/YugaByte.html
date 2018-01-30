@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ProtoVsJson</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.10.12, OS=macOS 10.13.2 (17C88) [Darwin 17.3.0]
+Intel Core i7-4770HQ CPU 2.20GHz (Haswell), 1 CPU, 8 logical cores and 4 physical cores
+.NET Core SDK=2.0.3
+  [Host]     : .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+  DefaultJob : .NET Core 2.0.3 (Framework 4.6.0.0), 64bit RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th> Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>JsonWrite</td><td>1,974.0 us</td><td>39.37 us</td><td>43.76 us</td><td>3961 B</td>
+</tr><tr><td>ProtobufWrite</td><td>1,913.0 us</td><td>37.45 us</td><td>49.99 us</td><td>2138 B</td>
+</tr><tr><td>JsonRead</td><td>682.3 us</td><td>13.54 us</td><td>20.27 us</td><td>840 B</td>
+</tr><tr><td>ProtobufRead</td><td>687.1 us</td><td>13.44 us</td><td>10.49 us</td><td>840 B</td>
+</tr></tbody></table>
+</body>
+</html>
