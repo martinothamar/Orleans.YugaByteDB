@@ -8,13 +8,13 @@ Intel Core i7-4770HQ CPU 2.20GHz (Haswell), 1 CPU, 8 logical cores and 4 physica
 
 
 ```
-|                 Method |       Mean |     Error |     StdDev |  Gen 0 | Allocated |
-|----------------------- |-----------:|----------:|-----------:|-------:|----------:|
-|     YugaByte_JsonWrite | 2,562.5 us | 50.881 us | 120.924 us |      - |    3577 B |
-| YugaByte_ProtobufWrite | 2,427.7 us | 48.483 us |  64.724 us |      - |    2266 B |
-|      YugaByte_JsonRead |   905.6 us | 18.140 us |  36.227 us |      - |     968 B |
-|  YugaByte_ProtobufRead |   906.9 us | 17.928 us |  17.607 us |      - |     984 B |
-|        Redis_JsonWrite |   137.0 us |  2.684 us |   3.490 us | 0.2441 |    2280 B |
-|    Redis_ProtobufWrite |   136.6 us |  2.731 us |   4.637 us | 0.2441 |    2280 B |
-|         Redis_JsonRead |   116.1 us |  2.557 us |   3.414 us | 0.1221 |     984 B |
-|     Redis_ProtobufRead |   114.6 us |  2.282 us |   3.046 us | 0.1221 |     984 B |
+|                 Method |       Mean |     Error |     StdDev | Allocated |
+|----------------------- |-----------:|----------:|-----------:|----------:|
+|     YugaByte_JsonWrite | 2,764.0 us | 54.053 us |  64.347 us |    4089 B |
+| YugaByte_ProtobufWrite | 2,546.1 us | 49.930 us | 100.860 us |    2282 B |
+|      YugaByte_JsonRead |   883.8 us | 17.580 us |  18.810 us |     968 B |
+|  YugaByte_ProtobufRead |   926.1 us | 18.389 us |  20.439 us |     984 B |
+|        Redis_JsonWrite |   459.0 us |  6.760 us |   5.992 us |    2264 B |
+|    Redis_ProtobufWrite |   423.4 us |  8.233 us |   9.481 us |    2280 B |
+|         Redis_JsonRead |   430.3 us |  8.479 us |  11.607 us |     968 B |
+|     Redis_ProtobufRead |   427.8 us |  9.320 us |   9.153 us |     984 B |
