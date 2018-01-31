@@ -6,25 +6,25 @@ namespace Orleans.YugaByteDB.TestSiloCommon
     [ProtoContract]
     public class SomeState
     {
-        [ProtoMember(1)]
+        [ProtoMember(1, IsRequired = true)]
         public string Property1 { get; set; } = "Property1";
-        [ProtoMember(2)]
+        [ProtoMember(2, IsRequired = true)]
         public string Property2 { get; set; } = "Property2";
-        [ProtoMember(3)]
+        [ProtoMember(3, IsRequired = true)]
         public string Property3 { get; set; } = "Property3";
-        [ProtoMember(4)]
+        [ProtoMember(4, IsRequired = true)]
         public bool Property4 { get; set; }
-        [ProtoMember(5)]
+        [ProtoMember(5, IsRequired = true)]
         public bool Property5 { get; set; } = true;
-        [ProtoMember(6)]
+        [ProtoMember(6, IsRequired = true)]
         public int Property6 { get; set; } = 1231230121;
-        [ProtoMember(7)]
+        [ProtoMember(7, IsRequired = true)]
         public decimal Property7 { get; set; } = 10.0001m;
-        [ProtoMember(8)]
+        [ProtoMember(8, IsRequired = true)]
         public long Property8 { get; set; } = 123302L;
-        [ProtoMember(9)]
+        [ProtoMember(9, IsRequired = true)]
         public float Property9 { get; set; } = 1.1f;
-        [ProtoMember(10)]
+        [ProtoMember(10, IsRequired = true)]
         public double Property10 { get; set; } = 20d;
 
         public override bool Equals(object obj)

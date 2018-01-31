@@ -8,6 +8,6 @@ namespace Orleans.YugaByteDB.TestSilo1.GrainInterfaces
     {
         Task Init();
 
-        Task Publish(object state);
+        Task PublishMessage(object state);
     }
 }

@@ -19,10 +19,10 @@ namespace Orleans.YugaByteDB.TestSilo1.Grains
         public override async Task OnActivateAsync()
         {
             Console.WriteLine("PublisherGrain publishing");
-            RegisterTimer(Publish, null, TimeSpan.Zero, TimeSpan.FromSeconds(10));
+            RegisterTimer(PublishMessage, null, TimeSpan.Zero, TimeSpan.FromSeconds(10));
         }
 
-        public async Task Publish(object state)
+        public async Task PublishMessage(object state)
         {
             await Publish(new SomeState());
         }

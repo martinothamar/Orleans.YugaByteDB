@@ -67,9 +67,9 @@ namespace Orleans.YugaByteDB.TestSilo1
                     .Build()
                     .Get<RawRabbitConfiguration>(),
                 Plugins = p => p
-                    .UseGlobalExecutionId()
-                    .UseMessageContext<MessageContext>()
+                    .UseProtobuf()
             });
+            
             var builder = new SiloHostBuilder()
                 .UseConfiguration(config)
                 .ConfigureServices(services =>
