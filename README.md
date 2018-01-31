@@ -6,7 +6,8 @@ Library containing Orleans-providers for YugaByteDB.
 
 Written som quick benchmarks comparing Json and Protobuf as well as YugaByteDB Redis and pure Redis.
 Both YugaByteDB and Redis av default configurations when started, allthough YugaByteDB provides 3 nodes
-while Redis is only installed as a single node.
+while Redis is only installed as a single node. YugaByteDB is also a true database in regards to persistence, while
+Redis only takes snapshots in intervals by default.
 
 ### YugaByte Redis on docker vs Redis installed natively
 
