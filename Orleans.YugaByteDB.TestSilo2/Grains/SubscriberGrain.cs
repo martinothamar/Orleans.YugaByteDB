@@ -5,11 +5,10 @@ using Orleans.YugaByteDB.TestSiloCommon;
 
 namespace Orleans.YugaByteDB.TestSilo2.Grains
 {
-    public class SubscriberGrain : GuidSubscriberGrain<SubscriberGrainState, Orleans.YugaByteDB.TestSilo2.GrainInterfaces.ISubscriberGrain>, Orleans.YugaByteDB.TestSilo2.GrainInterfaces.ISubscriberGrain
+    public class SubscriberGrain : GuidPubSubGrain<SubscriberGrainState, ISubscriberGrain>, ISubscriberGrain
     {
-        public SubscriberGrain(IRawRabbitStreamProvider stream)
+        public SubscriberGrain(IRawRabbitStreamProvider stream) : base(stream)
         {
-            this.stream = stream;
         }
 
         public Task Init()

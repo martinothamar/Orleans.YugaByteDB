@@ -5,13 +5,10 @@ using Orleans.YugaByteDB.TestSiloCommon;
 
 namespace Orleans.YugaByteDB.TestSilo1.Grains
 {
-    public class PublisherGrain : Grain<PublisherGrainState>, IPublisherGrain
+    public class PublisherGrain : GuidPubSubGrain<PublisherGrainState, IPublisherGrain>, IPublisherGrain
     {
-        private readonly IRawRabbitStreamProvider _stream;
-
-        public PublisherGrain(IRawRabbitStreamProvider stream)
+        public PublisherGrain(IRawRabbitStreamProvider stream) : base(stream)
         {
-            _stream = stream;
         }
 
         public Task Init()
@@ -27,7 +24,12 @@ namespace Orleans.YugaByteDB.TestSilo1.Grains
 
         public async Task Publish(object state)
         {
-            await _stream.Publish(new SomeState());
+            await Publish(new SomeState());
+        }
+
+        public override async Task OnMessage<T>(T message)
+        {
+            throw new NotImplementedException();
         }
     }
 }

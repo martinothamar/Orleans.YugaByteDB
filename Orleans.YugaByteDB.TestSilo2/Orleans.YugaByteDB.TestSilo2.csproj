@@ -21,10 +21,6 @@
     <PackageReference Include="Microsoft.Orleans.OrleansCodeGenerator.Build" Version="2.0.0-beta3" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Grains\" />
-    <Folder Include="GrainInterfaces\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Orleans.YugaByteDB.TestSiloCommon\Orleans.YugaByteDB.TestSiloCommon.csproj" />
     <ProjectReference Include="..\Orleans.YugaByteDB.StorageProvider\Orleans.YugaByteDB.StorageProviders.csproj" />
   </ItemGroup>

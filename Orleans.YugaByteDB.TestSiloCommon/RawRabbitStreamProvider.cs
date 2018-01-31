@@ -12,31 +12,31 @@ namespace Orleans.YugaByteDB.TestSiloCommon
 {
     public interface IRawRabbitStreamProvider
     {
-        // Task Subscribe<TMessage, TGrain>(TGrain grain, string subscriptionId) where TGrain : ISubscriberGrain<TMessage> where TMessage : class;
+        // Task Subscribe<TMessage, TGrain>(TGrain grain, string subscriptionId) where TGrain : IPubSubGrain<TMessage> where TMessage : class;
 
-        // Task Subscribe<TGrain, TMessage>(TGrain grain, string subscriptionId)where TGrain : ISubscriberGrain<TMessage>, IGrain where TMessage : class;
+        // Task Subscribe<TGrain, TMessage>(TGrain grain, string subscriptionId)where TGrain : IPubSubGrain<TMessage>, IGrain where TMessage : class;
 
-        // Task Subscribe<TMessage, T>(T grain, string subscriptionId) where T : ISubscriberGrain, IGrain where TMessage : class;
+        // Task Subscribe<TMessage, T>(T grain, string subscriptionId) where T : IPubSubGrain, IGrain where TMessage : class;
 
         Task Init(IProviderRuntime runtime, IBusClient client = null);
 
         Task SubscribeInteger<TMessage, TGrainInterface>(TGrainInterface grain, string subscriptionId)
             where TMessage : class
-            where TGrainInterface : IIntegerSubscriberGrain;
+            where TGrainInterface : IIntegerPubSubGrain;
 
         Task SubscribeInteger<TMessage, TGrainState, TGrainInterface>(TGrainInterface grain, string subscriptionId)
             where TMessage : class
             where TGrainState : new()
-            where TGrainInterface : IIntegerSubscriberGrain;
+            where TGrainInterface : IIntegerPubSubGrain;
 
         Task SubscribeGuid<TMessage, TGrainInterface>(TGrainInterface grain, string subscriptionId)
             where TMessage : class
-            where TGrainInterface : IGuidSubscriberGrain;
+            where TGrainInterface : IGuidPubSubGrain;
 
         Task SubscribeGuid<TMessage, TGrainState, TGrainInterface>(TGrainInterface grain, string subscriptionId)
             where TMessage : class
             where TGrainState : new()
-            where TGrainInterface : IGuidSubscriberGrain;
+            where TGrainInterface : IGuidPubSubGrain;
 
         Task Publish<TMessage>(TMessage message) where TMessage : class;
     }
@@ -70,9 +70,9 @@ namespace Orleans.YugaByteDB.TestSiloCommon
         private bool _initialized;
         private IGrainFactory _factory;
         private IBusClient _client;
-        private ConcurrentDictionary<RawRabbitSubscription, ConcurrentQueue<IIntegerSubscriberGrain>> _integerSubs;
-        private ConcurrentDictionary<RawRabbitSubscription, ConcurrentQueue<IGuidSubscriberGrain>> _guidSubs;
-        private TaskScheduler _scheduler;
+        private ConcurrentDictionary<RawRabbitSubscription, ConcurrentQueue<IIntegerPubSubGrain>> _integerSubs;
+        private ConcurrentDictionary<RawRabbitSubscription, ConcurrentQueue<IGuidPubSubGrain>> _guidSubs;
+        private TaskScheduler _orleansScheduler;
         private TaskScheduler _defaultScheduler;
 
         public Task Init(IProviderRuntime runtime, IBusClient client = null)
@@ -81,11 +81,11 @@ namespace Orleans.YugaByteDB.TestSiloCommon
                 throw new Exception("Provider already initialized");
             _initialized = true;
             _factory = runtime.GrainFactory;
-            _scheduler = TaskScheduler.Current;
+            _orleansScheduler = TaskScheduler.Current;
             _defaultScheduler = TaskScheduler.Default;
 
-            _integerSubs = new ConcurrentDictionary<RawRabbitSubscription, ConcurrentQueue<IIntegerSubscriberGrain>>();
-            _guidSubs = new ConcurrentDictionary<RawRabbitSubscription, ConcurrentQueue<IGuidSubscriberGrain>>();
+            _integerSubs = new ConcurrentDictionary<RawRabbitSubscription, ConcurrentQueue<IIntegerPubSubGrain>>();
+            _guidSubs = new ConcurrentDictionary<RawRabbitSubscription, ConcurrentQueue<IGuidPubSubGrain>>();
 
             _client = client ?? (IBusClient)runtime.ServiceProvider.GetService(typeof(IBusClient));
 
@@ -94,52 +94,36 @@ namespace Orleans.YugaByteDB.TestSiloCommon
 
         public async Task Handler<T>(T message) where T : class
         {
-            Console.WriteLine("GOT MESSAGE: " + message);
             var msgType = typeof(T);
             var sub = new RawRabbitSubscription(msgType);
-
-            Console.WriteLine("subs " + _integerSubs.Count + " " + _guidSubs.Count);
-            var intSubs = _integerSubs.GetOrAdd(sub, new ConcurrentQueue<IIntegerSubscriberGrain>());
-            var guidSubs = _guidSubs.GetOrAdd(sub, new ConcurrentQueue<IGuidSubscriberGrain>());
-
-            Console.WriteLine(intSubs.Count);
-            Console.WriteLine(guidSubs.Count);
-            // var tasks = new Task[intSubs.Count + guidSubs.Count];
+            
+            var intSubs = _integerSubs.GetOrAdd(sub, new ConcurrentQueue<IIntegerPubSubGrain>());
+            var guidSubs = _guidSubs.GetOrAdd(sub, new ConcurrentQueue<IGuidPubSubGrain>());
+            
+            var tasks = new Task[intSubs.Count + guidSubs.Count];
             for (int i = 0; i < intSubs.Count; i++)
             {
-                Console.WriteLine("called intSubs grain");
                 var intSub = intSubs.ElementAt(i);
-                // tasks[i] = intSub.OnMessage(message);
-                Console.WriteLine("called intSubs grain");
+                tasks[i] = OrleansDispatch(async () => await intSub.OnMessage(message));
             }
             for (int i = 0; i < guidSubs.Count; i++)
             {
-                Console.WriteLine("called guidSubs grain");
                 var guidSub = guidSubs.ElementAt(i);
-                // tasks[intSubs.Count + i] = guidSub.OnMessage(message);
-                ;
-                await Task.Factory.StartNew(
-                    async () => await guidSub.OnMessage(message),
-                    CancellationToken.None,
-                    TaskCreationOptions.None,
-                    _scheduler
-                 );
-                Console.WriteLine("called guidSubs grain");
+                tasks[i] = OrleansDispatch(async () => await guidSub.OnMessage(message));
             }
-            // await Task.WhenAll(tasks);
-            Console.WriteLine("doneeee");
+            await Task.WhenAll(tasks);
         }
 
         public async Task SubscribeInteger<TMessage, TGrainInterface>(TGrainInterface grain, string subscriptionId)
             where TMessage : class
-            where TGrainInterface : IIntegerSubscriberGrain
+            where TGrainInterface : IIntegerPubSubGrain
         {
             var actualGrain = _factory.GetGrain<TGrainInterface>(grain.GetPrimaryKeyLong());
-            ConcurrentQueue<IIntegerSubscriberGrain> queue;
+            ConcurrentQueue<IIntegerPubSubGrain> queue;
             var subType = new RawRabbitSubscription(typeof(TMessage));
             if (!_integerSubs.TryGetValue(subType, out queue))
             {
-                queue = new ConcurrentQueue<IIntegerSubscriberGrain>();
+                queue = new ConcurrentQueue<IIntegerPubSubGrain>();
                 _integerSubs.AddOrUpdate(subType, queue, (subscription, grains) =>
                 {
                     queue = grains;
@@ -147,26 +131,20 @@ namespace Orleans.YugaByteDB.TestSiloCommon
                 });
             }
             queue.Enqueue(actualGrain);
-            await Task.Factory.StartNew(
-                async () => await _client.SubscribeAsync((TMessage msg) => Handler(msg)), 
-                CancellationToken.None,
-                TaskCreationOptions.None,
-                _defaultScheduler
-             );
-
+            await _client.SubscribeAsync((TMessage msg) => Handler(msg));
         }
 
         public async Task SubscribeInteger<TMessage, TGrainState, TGrainInterface>(TGrainInterface grain, string subscriptionId)
             where TMessage : class
             where TGrainState : new()
-            where TGrainInterface : IIntegerSubscriberGrain
+            where TGrainInterface : IIntegerPubSubGrain
         {
             var actualGrain = _factory.GetGrain<TGrainInterface>(grain.GetPrimaryKeyLong());
-            ConcurrentQueue<IIntegerSubscriberGrain> queue;
+            ConcurrentQueue<IIntegerPubSubGrain> queue;
             var subType = new RawRabbitSubscription(typeof(TMessage));
             if (!_integerSubs.TryGetValue(subType, out queue))
             {
-                queue = new ConcurrentQueue<IIntegerSubscriberGrain>();
+                queue = new ConcurrentQueue<IIntegerPubSubGrain>();
                 _integerSubs.AddOrUpdate(subType, queue, (subscription, grains) =>
                 {
                     queue = grains;
@@ -174,24 +152,19 @@ namespace Orleans.YugaByteDB.TestSiloCommon
                 });
             }
             queue.Enqueue(actualGrain);
-            await Task.Factory.StartNew(
-                async () => await _client.SubscribeAsync((TMessage msg) => Handler(msg)),
-                CancellationToken.None,
-                TaskCreationOptions.None,
-                _defaultScheduler
-             );
+            await _client.SubscribeAsync((TMessage msg) => Handler(msg));
         }
 
         public async Task SubscribeGuid<TMessage, TGrainInterface>(TGrainInterface grain, string subscriptionId)
             where TMessage : class
-            where TGrainInterface : IGuidSubscriberGrain
+            where TGrainInterface : IGuidPubSubGrain
         {
             var actualGrain = _factory.GetGrain<TGrainInterface>(grain.GetPrimaryKey());
-            ConcurrentQueue<IGuidSubscriberGrain> queue;
+            ConcurrentQueue<IGuidPubSubGrain> queue;
             var subType = new RawRabbitSubscription(typeof(TMessage));
             if (!_guidSubs.TryGetValue(subType, out queue))
             {
-                queue = new ConcurrentQueue<IGuidSubscriberGrain>();
+                queue = new ConcurrentQueue<IGuidPubSubGrain>();
                 _guidSubs.AddOrUpdate(subType, queue, (subscription, grains) =>
                 {
                     queue = grains;
@@ -199,25 +172,20 @@ namespace Orleans.YugaByteDB.TestSiloCommon
                 });
             }
             queue.Enqueue(actualGrain);
-            await Task.Factory.StartNew(
-                async () => await _client.SubscribeAsync((TMessage msg) => Handler(msg)),
-                CancellationToken.None,
-                TaskCreationOptions.None,
-                _defaultScheduler
-             );
+            await _client.SubscribeAsync((TMessage msg) => Handler(msg));
         }
 
         public async Task SubscribeGuid<TMessage, TGrainState, TGrainInterface>(TGrainInterface grain, string subscriptionId)
             where TMessage : class
             where TGrainState : new()
-            where TGrainInterface : IGuidSubscriberGrain
+            where TGrainInterface : IGuidPubSubGrain
         {
             var actualGrain = _factory.GetGrain<TGrainInterface>(grain.GetPrimaryKey());
-            ConcurrentQueue<IGuidSubscriberGrain> queue;
+            ConcurrentQueue<IGuidPubSubGrain> queue;
             var subType = new RawRabbitSubscription(typeof(TMessage));
             if (!_guidSubs.TryGetValue(subType, out queue))
             {
-                queue = new ConcurrentQueue<IGuidSubscriberGrain>();
+                queue = new ConcurrentQueue<IGuidPubSubGrain>();
                 _guidSubs.AddOrUpdate(subType, queue, (subscription, grains) =>
                 {
                     queue = grains;
@@ -225,17 +193,32 @@ namespace Orleans.YugaByteDB.TestSiloCommon
                 });
             }
             queue.Enqueue(actualGrain);
-            await Task.Factory.StartNew(
-                async () => await _client.SubscribeAsync((TMessage msg) => Handler(msg)),
-                CancellationToken.None,
-                TaskCreationOptions.None,
-                _defaultScheduler
-             );
+            await _client.SubscribeAsync((TMessage msg) => Handler(msg));
         }
 
         public async Task Publish<TMessage>(TMessage message) where TMessage : class
         {
             await _client.PublishAsync(message);
+        }
+
+        private Task OrleansDispatch(Func<Task> action)
+        {
+            return Task.Factory.StartNew(
+                action,
+                CancellationToken.None,
+                TaskCreationOptions.None,
+                _orleansScheduler
+            ).Unwrap();
+        }
+
+        private Task NETDispatch(Func<Task> action)
+        {
+            return Task.Factory.StartNew(
+                action,
+                CancellationToken.None,
+                TaskCreationOptions.None,
+                _defaultScheduler
+            ).Unwrap();
         }
     }
 }

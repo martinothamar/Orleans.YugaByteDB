@@ -68,6 +68,7 @@ namespace Orleans.YugaByteDB.TestSilo2
                     .Get<RawRabbitConfiguration>(),
                 Plugins = p => p
                     .UseGlobalExecutionId()
+                    .UseProtobuf()
                     .UseMessageContext<MessageContext>()
             });
 

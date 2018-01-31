@@ -4,7 +4,7 @@ using Orleans.YugaByteDB.TestSiloCommon;
 
 namespace Orleans.YugaByteDB.TestSilo2.GrainInterfaces
 {
-    public interface ISubscriberGrain : IGuidSubscriberGrain
+    public interface ISubscriberGrain : IGuidPubSubGrain
     {
         Task Init();
     }
