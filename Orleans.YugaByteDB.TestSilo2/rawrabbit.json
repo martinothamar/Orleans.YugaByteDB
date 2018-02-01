@@ -13,12 +13,12 @@
   "TopologyRecovery": true,
   "Exchange": {
     "Durable": true,
-    "AutoDelete": true,
+    "AutoDelete": false,
     "Type": "Topic"
   },
   "Queue": {
-    "AutoDelete": true,
+    "AutoDelete": false,
     "Durable": true,
-    "Exclusive": true
+    "Exclusive": false
   }
 }

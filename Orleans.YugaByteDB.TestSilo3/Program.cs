@@ -51,7 +51,7 @@ namespace Orleans.YugaByteDB.TestSilo2
         private static async Task<ISiloHost> StartSilo()
         {
             // define the cluster configuration
-            var config = ClusterConfiguration.LocalhostPrimarySilo(22222, 40000);
+            var config = ClusterConfiguration.LocalhostPrimarySilo(22223, 40001);
             var opts = new Dictionary<string, string>()
             {
                 { "Serializer", RedisStorageProvider.Serializers.Protobuf },

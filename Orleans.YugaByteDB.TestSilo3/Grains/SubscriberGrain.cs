@@ -34,7 +34,8 @@ namespace Orleans.YugaByteDB.TestSilo2.Grains
         public override Task OnMessage<T>(T message)
         {
             var velocity = "";
-            if (counter > 0) {
+            if (counter > 0)
+            {
                 var now = DateTime.UtcNow.Ticks;
                 var diff = now - started;
                 var seconds = diff / TimeSpan.TicksPerSecond;

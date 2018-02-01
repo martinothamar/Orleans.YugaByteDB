@@ -77,8 +77,7 @@ namespace Orleans.YugaByteDB.TestSilo1
                     services.AddSingleton<IRawRabbitStreamProvider, RawRabbitStreamProvider>();
                     services.AddSingleton<IBusClient>(client);
                 })
-                .ConfigureApplicationParts(parts => parts.AddApplicationPart(typeof(PublisherGrain).Assembly))
-                .ConfigureLogging(logging => logging.AddConsole());
+                .ConfigureApplicationParts(parts => parts.AddApplicationPart(typeof(PublisherGrain).Assembly));
 
             var host = builder.Build();
             await host.StartAsync();
