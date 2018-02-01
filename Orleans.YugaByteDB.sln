@@ -13,14 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFi
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orleans.YugaByteDB.TestSilo1", "Orleans.YugaByteDB.TestSilo1\Orleans.YugaByteDB.TestSilo1.csproj", "{E7701B91-0245-4514-A1E1-1AF910AA12C0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orleans.YugaByteDB.TestSilo2", "Orleans.YugaByteDB.TestSilo2\Orleans.YugaByteDB.TestSilo2.csproj", "{8FCE8070-16CD-43B0-AD43-C17F341FE233}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orleans.YugaByteDB.TestSiloCommon", "Orleans.YugaByteDB.TestSiloCommon\Orleans.YugaByteDB.TestSiloCommon.csproj", "{341B6E3F-10B1-4992-9F41-507CA8E89A59}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orleans.YugaByteDB.TestSilo3", "Orleans.YugaByteDB.TestSilo3\Orleans.YugaByteDB.TestSilo3.csproj", "{1CD05523-641A-4115-AFCB-C922ECA156BE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
