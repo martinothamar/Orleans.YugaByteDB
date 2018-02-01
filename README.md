@@ -1,6 +1,6 @@
 # Orleans.YugaByteDB
 
-Library containing Orleans-providers for YugaByteDB.
+Library containing Orleans-providers for [YugaByteDB](https://github.com/YugaByte/yugabyte-db).
 
 ## Benchmarks
 
